@@ -1,0 +1,1 @@
+1. Show size of folders - "du -h"
