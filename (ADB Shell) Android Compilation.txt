@@ -1,3 +1,7 @@
 1. Show size of folders - "du -h"
 
 2. Remove folders (recursively) - "rm "foldername" -r"
+
+3. Copy files to local harddrive - "adb pull "/source/folder" "/destination/folder""
+
+4. Copy files to phone/sd card - "adb push "/source/folder" "/destination/folder""
