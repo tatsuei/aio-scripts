@@ -5,3 +5,8 @@
 3. Copy files to local harddrive - "adb pull "/source/folder" "/destination/folder""
 
 4. Copy files to phone/sd card - "adb push "/source/folder" "/destination/folder""
+
+5. Change animation scales: 
+5a. settings put global window_animation_scale X.X
+5b. settings put global transition_animation_scale X.X
+5c. settings put global animator_duration_scale X.X
