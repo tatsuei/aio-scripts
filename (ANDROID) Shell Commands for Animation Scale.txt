@@ -1,8 +1,0 @@
-adb shell
-settings put global window_animation_scale X.X
-settings put global transition_animation_scale X.X
-settings put global animator_duration_scale X.X
-
-*Replace X with a number, from 0-2 (including any decimals in between)*
-**There's no need for a reboot, settings are applied immediately**
-***If you want to revert back to the stock settings, go to "Developer Options"***
