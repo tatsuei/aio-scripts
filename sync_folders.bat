@@ -1,0 +1,1 @@
+robocopy "C:\Users\eiji\Zotero\storage" "D:/Zotero/storage" /e /purge

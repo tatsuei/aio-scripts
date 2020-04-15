@@ -1,0 +1,4 @@
+// Change 1..X to what you want the folders to be called, e.g: A..D
+// Change rs to the prefix for the foldername
+// Replace .\data\ with your preferred directory
+1..X | ForEach {MD ".\data\rs$_"}
