@@ -13,3 +13,7 @@ A collection of powershell and CMD commands
 - Batch file to convert multiple images using Inkscape (primarily .svg to .png)
 ## How to navigate this repo? 
 Click on the links below!
+
+## Links
+
+[Powershell Compilation]("Scripts/Powershell Compilation.md") 
