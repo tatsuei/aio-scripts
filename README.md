@@ -16,11 +16,11 @@ Click on the links below!
 
 ## Links
 
+[Powershell Compilation](https://github.com/tatsuei/Scripts/blob/master/Powershell%20Compilation.md) - A collection of all the useful PowerShell commands and one-liners I've found over the years.
+
 [Rclone Sync - Manga](https://github.com/tatsuei/Scripts/blob/master/rclone-manga.bat) - A Windows batch file for syncing comics using Rclone
 
 [Rclone Sync - Music](https://github.com/tatsuei/Scripts/blob/master/rclone-music.bat) - A Windows batch file for syncing music using Rclone
 
 [Rclone Sync - Videos](https://github.com/tatsuei/Scripts/blob/master/rclone-videos.bat) - A Windows batch file for syncing videos using Rclone
-
-[Powershell Compilation](https://github.com/tatsuei/Scripts/blob/master/Powershell%20Compilation.md) - A collection of all the useful PowerShell commands and one-liners I've found over the years.
 
