@@ -16,4 +16,4 @@ Click on the links below!
 
 ## Links
 
-[Powershell Compilation](https://github.com/tatsuei/Scripts/blob/master/Powershell%20Compilation.md) 
+[Powershell Compilation](https://github.com/tatsuei/Scripts/blob/master/Powershell%20Compilation.md) - A collection of all the useful PowerShell commands and one-liners I've found over the years.
