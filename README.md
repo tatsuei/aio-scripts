@@ -1,8 +1,8 @@
 # Scripts
 A collection of powershell and CMD commands
 
-## What is in this repo?
-- Batch files for zipping multiple folders (putting the contents into a folder or just zipping the contents straightup)
+## What's in this repo?
+- Batch files for zipping multiple folders (putting the contents into a folder or just straightup zipping the contents )
 - Shell commands for Android animation scales (window, transition, animator) 
 - Powershell commands to rename multiple filenames
 - Powershell commands to add pre/suffixes to file/folder names
