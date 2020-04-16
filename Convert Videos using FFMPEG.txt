@@ -1,3 +1,0 @@
-// Change the file extensions to match your needs
-// Put "" quotation marks around the filenames which have spaces
-ffmpeg -i input_file.mov -c copy output_file.mp4
