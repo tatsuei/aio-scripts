@@ -16,6 +16,16 @@ Click on the links below!
 
 ## Links
 
+[Add Metadata to MP4s]()
+
+[Change VLC Playlist Path]()
+
+[CMD Compilation]() 
+
+[Convert Multiple Images]()
+
+[FFMPEG Compilation]()
+
 [Powershell Compilation](https://github.com/tatsuei/Scripts/blob/master/Powershell%20Compilation.md) - A collection of all the useful PowerShell commands and one-liners I've found over the years.
 
 [Rclone Sync - Manga](https://github.com/tatsuei/Scripts/blob/master/rclone-manga.bat) - A Windows batch file for syncing comics using Rclone
