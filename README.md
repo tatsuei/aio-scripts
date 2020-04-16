@@ -16,17 +16,17 @@ Click on the links below!
 
 ## Links
 
-[Add Metadata to MP4s]()
+[Add Metadata to MP4s](https://github.com/tatsuei/Scripts/blob/master/atomic-parsley-metadata.bat) - Use AtomicParsley to add metadata (Title, Artist, etc.) to MP4s.
 
-[Change VLC Playlist Path]()
+[VLC Compilation](https://github.com/tatsuei/Scripts/blob/master/vlc-compilation.md) - A list of various settings/parameters related to VLC
 
-[CMD Compilation]() 
+[CMD Compilation](https://github.com/tatsuei/Scripts/blob/master/cmd-compilation.md) - A current list of all the commands I've used in the past  
 
-[Convert Multiple Images]()
+[Convert Images](https://github.com/tatsuei/Scripts/blob/master/convert-images.bat) - A batch file to convert multiple images from one format to another 
 
-[FFMPEG Compilation]()
+[FFMPEG Compilation](https://github.com/tatsuei/Scripts/blob/master/ffmpeg-compilation.md) - A list of various commands for FFMPEG
 
-[Powershell Compilation](https://github.com/tatsuei/Scripts/blob/master/Powershell%20Compilation.md) - A collection of all the useful PowerShell commands and one-liners I've found over the years.
+[Powershell Compilation](https://github.com/tatsuei/Scripts/blob/master/ps-compilation.cmd) - A collection of all the useful PowerShell commands and one-liners I've found over the years.
 
 [Rclone Sync - Manga](https://github.com/tatsuei/Scripts/blob/master/rclone-manga.bat) - A Windows batch file for syncing comics using Rclone
 
