@@ -28,3 +28,8 @@
 7. `Get-ChildItem | Rename-Item -NewName { "Prefix_" + $_.Name } -WhatIf`
 
 8. `Get-ChildItem | Rename-Item -NewName {$_.Name + "Suffix_" + $_.Extension} -WhatIf`
+
+9. // Change 1..X to what you want the folders to be called, e.g: `A..D`
+   // Change `rs` to the prefix for the folder name
+   // Replace `.\folderhere\` with your preferred directory
+   `1..X | ForEach {MD ".\folderhere\rs$_"}`
