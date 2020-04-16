@@ -1,6 +1,0 @@
-You should change <location>file:///D:/Library/Downloads/test.mkv</location> to <location>file:///./test.mkv</location>. 
-Just change it for all files using text editor. It works for me (version 3.0.6 and next versions). 
-So it will work if you change the name of directory or change the disk. 
-But your playlist file shoud be with songs it used. 
-I think it's a reason why vlc will use only absolute path in future. 
-It's more comfortable if you are not going to move your songs
