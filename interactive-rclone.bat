@@ -1,0 +1,83 @@
+@echo off
+Title Rclone Interactive CLI
+Color 03
+
+:initial
+Call :Browse4Folder "Choose folder to upload:"
+echo You have chosen "%Location%"
+if "%Location%"=="Dialog Cancelled" (
+	CHOICE /N /C:YN /M "Press Y to continue, or N to cancel."
+	If ERRORLEVEL 2 goto two
+	If ERRORLEVEL 1 goto initial
+)
+goto :start
+
+:start
+Set DirName=%Location%
+echo %DirName%
+for %%I in ("%DirName%") do echo %%~nxI
+for %%I in ("%DirName%") do set CurrDirName=%%~nxI
+echo "Which folder would you like to upload to?"
+set /p folder=
+echo %folder%
+echo "%DirName%" "crypt-drive:/%folder%/%CurrDirName%/"
+rem Replace crypt-drive with your drive's name! 
+
+:choice
+echo Are you sure you want to upload to this folder? (y/n)
+set /p confirm=
+echo %confirm%
+if "%confirm%"=="y" (
+	echo "Okay I'll be starting the upload now!"
+	goto :upload
+)
+if "%confirm%"=="n" (
+	echo "Please choose another folder instead!"
+	set /p test=
+	goto :choice
+)
+goto :choice
+
+:upload 
+echo "Uploading..."
+
+:newUpload
+echo "Would you like to upload another file? (y/n)"
+set /p newInput=
+echo %newInput%
+if "%newInput%"=="y" (
+	goto :initial
+)
+if "%newInput%"=="n" (
+	exit
+)
+goto :newUpload
+
+goto start
+cmd /k
+
+:two 
+exit
+::***************************************************************************
+:Browse4Folder
+set Location=
+set vbs="%temp%\_.vbs"
+set cmd="%temp%\_.cmd"
+for %%f in (%vbs% %cmd%) do if exist %%f del %%f
+for %%g in ("vbs cmd") do if defined %%g set %%g=
+(
+    echo set shell=WScript.CreateObject("Shell.Application"^) 
+    echo set f=shell.BrowseForFolder(0,"%~1",0,"%~2"^) 
+    echo if typename(f^)="Nothing" Then  
+    echo wscript.echo "set Location=Dialog Cancelled"
+    echo WScript.Quit(1^)
+    echo end if 
+    echo set fs=f.Items(^):set fi=fs.Item(^) 
+    echo p=fi.Path:wscript.echo "set Location=" ^& p
+)>%vbs%
+cscript //nologo %vbs% > %cmd%
+for /f "delims=" %%a in (%cmd%) do %%a
+for %%f in (%vbs% %cmd%) do if exist %%f del /f /q %%f
+for %%g in ("vbs cmd") do if defined %%g set %%g=
+goto :eof
+::***************************************************************************
