@@ -3,7 +3,7 @@ Title Rclone Interactive CLI
 Color 03
 
 :initial
-Call :Browse4Folder "Choose folder to upload:"
+Call :Browse4Folder "Choose folder to upload"
 echo You have chosen "%Location%"
 if "%Location%"=="Dialog Cancelled" (
 	CHOICE /N /C:YN /M "Press Y to continue, or N to cancel."
@@ -20,29 +20,37 @@ for %%I in ("%DirName%") do set CurrDirName=%%~nxI
 echo "Which folder would you like to upload to?"
 set /p folder=
 echo %folder%
-echo "%DirName%" "crypt-drive:/%folder%/%CurrDirName%/"
-rem Replace crypt-drive with your drive's name! 
 
 :choice
 echo Are you sure you want to upload to this folder? (y/n)
 set /p confirm=
 echo %confirm%
 if "%confirm%"=="y" (
-	echo "Okay I'll be starting the upload now!"
-	goto :upload
+	echo Okay I'll be starting the upload now!
+	echo Beginning upload from "%DirName%" to "crypt-drive:/%folder%/%CurrDirName%/"! Please wait...
+	rclone copy "%DirName%" "crypt-drive:/%folder%/%CurrDirName%/" -P -vv
+	rem Change crypt-drive to your encrypted drive's name!
 )
-if "%confirm%"=="n" (
-	echo "Please choose another folder instead!"
-	set /p test=
-	goto :choice
-)
-goto :choice
 
-:upload 
-echo "Uploading..."
+if "%confirm%"=="n" (
+:no
+	echo Please choose another folder instead!
+	set /p test=
+	echo "Are you sure? (y/n)"
+	set /p confirm2=
+	echo %confirm2%
+)
+if "%confirm2%"=="n" (
+	goto :no
+)
+if "%confirm2%"=="y" (
+	echo Beginning upload from "%DirName%" to "crypt-drive:/%test%/%CurrDirName%/"! Please wait...
+	rclone copy "%DirName%" "crypt-drive:/%test%/%CurrDirName%/" -P -vv
+	echo "%DirName%" "crypt-drive:/%test%/%CurrDirName%/" -P -vv
+)
 
 :newUpload
-echo "Would you like to upload another file? (y/n)"
+echo Would you like to upload another file? (y/n)
 set /p newInput=
 echo %newInput%
 if "%newInput%"=="y" (
@@ -58,6 +66,7 @@ cmd /k
 
 :two 
 exit
+
 ::***************************************************************************
 :Browse4Folder
 set Location=
