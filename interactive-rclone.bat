@@ -5,7 +5,7 @@ Color 03
 
 :initial
 cls
-Call :Browse4Folder "Choose folder to upload"
+Call :UploadFolder "Choose folder to upload"
 echo You have chosen "%Location%"
 if "%Location%"=="Dialog Cancelled" (
 	CHOICE /N /C:YN /M "Press Y to choose a folder for upload, or N to quit."
@@ -65,7 +65,7 @@ cmd /k
 exit
 
 ::***************************************************************************
-:Browse4Folder
+:UploadFolder
 set Location=
 set vbs="%temp%\_.vbs"
 set cmd="%temp%\_.cmd"
