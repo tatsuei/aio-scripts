@@ -2,11 +2,13 @@
 Title Rclone Interactive CLI
 Color 03
 
+
 :initial
+cls
 Call :Browse4Folder "Choose folder to upload"
 echo You have chosen "%Location%"
 if "%Location%"=="Dialog Cancelled" (
-	CHOICE /N /C:YN /M "Press Y to continue, or N to cancel."
+	CHOICE /N /C:YN /M "Press Y to choose a folder for upload, or N to quit."
 	If ERRORLEVEL 2 goto two
 	If ERRORLEVEL 1 goto initial
 )
@@ -28,8 +30,7 @@ echo %confirm%
 if "%confirm%"=="y" (
 	echo Okay I'll be starting the upload now!
 	echo Beginning upload from "%DirName%" to "crypt-drive:/%folder%/%CurrDirName%/"! Please wait...
-	rclone copy "%DirName%" "crypt-drive:/%folder%/%CurrDirName%/" -P -vv
-	rem Change crypt-drive to your encrypted drive's name!
+	rem rclone copy "%DirName%" "crypt-drive:/%folder%/%CurrDirName%/" -P -vv
 )
 
 if "%confirm%"=="n" (
@@ -45,20 +46,16 @@ if "%confirm2%"=="n" (
 )
 if "%confirm2%"=="y" (
 	echo Beginning upload from "%DirName%" to "crypt-drive:/%test%/%CurrDirName%/"! Please wait...
-	rclone copy "%DirName%" "crypt-drive:/%test%/%CurrDirName%/" -P -vv
+	rem rclone copy "%DirName%" "crypt-drive:/%test%/%CurrDirName%/" -P -vv
 	echo "%DirName%" "crypt-drive:/%test%/%CurrDirName%/" -P -vv
 )
 
 :newUpload
 echo Would you like to upload another file? (y/n)
-set /p newInput=
-echo %newInput%
-if "%newInput%"=="y" (
-	goto :initial
-)
-if "%newInput%"=="n" (
-	exit
-)
+CHOICE /N /C:YN /M "Press Y to choose another file, or N to quit."
+If ERRORLEVEL 2 goto two
+If ERRORLEVEL 1 goto initial
+
 goto :newUpload
 
 goto start
