@@ -1,5 +1,5 @@
 # Scripts
-A collection of powershell and CMD commands
+A collection of PowerShell, CMD, and terminal (*nix) commands
 
 ## What's in this repo?
 - Batch files for zipping multiple folders (putting the contents into a folder or just straightup zipping the contents )
