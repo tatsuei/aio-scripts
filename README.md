@@ -14,8 +14,6 @@ A collection of PowerShell, CMD, and terminal (*nix) commands
 ## How to navigate this repo? 
 Click on the links below!
 
-[toc] 
-
 ## Links
 
 [Add metadata to MP4s (Windows)](https://github.com/tatsuei/Scripts/blob/master/atomic-parsley-metadata.bat) - Use AtomicParsley to add metadata (Title, Artist, etc.) to MP4s.
@@ -121,7 +119,7 @@ echo %count% file(s) converted from %sourceType% to %outputType%!
 pause
 ```
 
-## General customisation (for all OSes)
+## General Customisation (for all OSes)
 
 ## Firefox
 
@@ -154,14 +152,14 @@ Since there is no real help or documentation how to style the new  Firefox  Beta
 
 ##### Pre-setup
 
-###### Before being able to try styles, you need to enable two developer options (only do this once). To do that:
+**Before being able to try styles, you need to enable two developer options (only do this once). To do that:**
 
 1. Press Ctrl + Shift + I on Win/Linux or Cmd + Opt + I on Mac
 2. Click on the cog that appears in a right or left top corner, next to other buttons.
 3. Scroll down to Advanced Settings and check the settings "Enable  browser chrome and add-on debugging toolboxes" and "Enable remote  debugging".
 4. Close the developer tools panel and proceed with next tutorial
 
-###### Testing a style
+**Testing a style**
 
 1. Press Ctrl + Alt + Shift + I on Win/Linux or Cmd + Opt + Shift + I on Mac
 2. A permission dialog will prompt you to allow remote debug, accept
