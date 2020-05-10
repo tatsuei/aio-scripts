@@ -1,10 +1,14 @@
-# Linux
+[toc] 
+
+# Ubuntu
 
 ## Ubuntu/Mint Tips
 
 Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and follow the guides.
 
-## Changing Windows Cursors for Ubuntu
+## Customisation
+
+### 1. Changing Windows Cursors for Ubuntu
 
 1. Find the .cur and .ani files you want to use.
 2. Put them in a folder.
@@ -14,9 +18,9 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 6. Use the template provided for a quickstart.
 7. ***Use the latest release for newer Ubuntu distros***, if not you could try the older releases too!
 
-## Changing the lockscreen background (Ubuntu 20.04)
+### 2. Changing the lockscreen background (Ubuntu 20.04)
 
-### Note: GDM3 won't accept filenames with spaces!!! Change filenames to include dashes ( - ) or underscores ( _ ) to work with filenames with spaces :)
+***Note: GDM3 won't accept filenames with spaces!!! Change filenames to include dashes ( - ) or underscores ( _ ) to work with filenames with spaces :)***
 
 1. In a terminal, type `sudo apt install libglib2.0-dev-bin` and press Return/Enter.
 2. Then type `curl -L -O github.com/thiggy01/ubuntu-20.04-change-gdm-background/raw/master/ubuntu-20.04-change-gdm-background` or `curl -L -O github.com/ttsuei/ubuntu-20.04-change-gdm-background/raw/master/ubuntu-20.04-change-gdm-background` if the first one doesn't work anymore.
@@ -25,19 +29,23 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 5. It would ask if you would like to restart the GDM service, so type `Y`. If it doesn't, type `systemctl restart gdm.service` to restart it manually.
 6. Wait for a bit and BOOM! You got yoself a nice new lockscreen :D
 
+### 3. DeadBeeF Custom Layout
+
+[deadbeef Arc Darker Theme](/home/tatsuei/Downloads/deadbeef-arc-darker-theme.txt)
+
 ## Shortcuts (Ubuntu 20.04)
 
-### Moving Windows between Workspaces
+### 1. Moving Windows between Workspaces
 
 1. Ctrl + Alt + Arrowkey to switch between workspaces
 2. Ctrl + Alt + Shift + Arrowkey to move the current window between workspaces
 
-### Custom Key Mappings
+### 2. Custom Key Mappings
 
-1. Alt + 1 - Firefox
-2. Alt + 2 - Brave
-3. Alt + 3 - Typora
-4. Alt + M - Music (Foobar2000)
+1. In your upper right hand corner of the screen, click on the arrow facing downwards.
+2. Click the "Settings" option near the bottom of the dropdown menu which appears.
+3. A new window will appear. Try scrolling through the categories on the left pane till you find "Keyboard Shortcuts" or something to that effect :stuck_out_tongue_closed_eyes:. 
+4.  
 
 ## Printing SysInfo
 
@@ -65,7 +73,7 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 
 1. Install one of these two: [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/) or [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) either from source (on Github) or from the Gnome Extensions page.
 
-## Auto-connect Bluetooth Devices Ubuntu
+## Auto-connect Bluetooth Devices
 
 **Note:**
 This has been tested on my `Galaxy Buds` OS: `Ubuntu 20.04` as of 8th May 2020.
@@ -162,56 +170,3 @@ Comment=Connects to Galaxy Buds
 12. Save the file, and then exit the editor.
 13. Reboot your computer, and see the magic happen(?) :)
 
-## DeadBeeF Custom Layout
-
-[deadbeef Arc Darker Theme](/home/tatsuei/Downloads/deadbeef-arc-darker-theme.txt)
-
-## Minimal Firefox userChrome style
-
-[Minimal Functional Fox](https://github.com/mut-ex/minimal-functional-fox) or [Minimal Functional Fox (Fork)](https://github.com/tatsuei/minimal-functional-fox)
-
-## Tutorial for creating userChrome styles for Firefox
-
-Since there is no real help or documentation how to style the new Firefox  Beta 57 I found a way how to live-debug the userChrome.css file.
-
-Create the userChrome.css
-
-1. [Enable userChrome.css support in Fx v69+](https://www.reddit.com/r/FirefoxCSS/comments/brmi8v/psa_firefox_v69_users_will_have_to_set_a_pref_to/)
-2. Open about:support
-3. Click on "Profile Folder" -> "Open Folder"
-4. Create a sub-folder named "chrome"
-5. Change into the new folder
-6. Create a file named "userChrome.css"
-7. Add some rules
-8. Restart Firefox
-
-Live-Testing styles
-
-Pre-setup
-
-Before being able to try styles, you need to enable two developer options (only do this once). To do that:
-
-1. Press Ctrl + Shift + I on Win/Linux or Cmd + Opt + I on Mac
-2. Click on the cog that appears in a right or left top corner, next to other buttons.
-3. Scroll down to Advanced Settings and check the settings "Enable browser chrome and add-on debugging toolboxes" and "Enable remote debugging".
-4. Close the developer tools panel and proceed with next tutorial
-
-Testing a style
-
-1. Press Ctrl + Alt + Shift + I on Win/Linux or Cmd + Opt + Shift + I on Mac
-2. A permission dialog will prompt you to allow remote debug, accept
-3. Click on the tab Style Editor, choose file userChrome.css on the sidebar
-4. Choose the style you want to preview from this repository, copy the code
-5. Scroll down on the development tools window textbox, paste the code
-6. You should see the style being applied. If you like what you see, you can  click Save, otherwise it will disappear after restarting the browser.
-
-Styling Context Menus / Popups
-
-from [/u/DanTheMan74](https://www.reddit.com/u/DanTheMan74/)
-The Firefox dev tools, when they're opened for remote debugging of the  browser content, have an extra option that's hidden behind the dropdown  at the top right, a thing which many people have no clue about.
-
-The toggle is called Disable Popup Auto-Hide and it does exactly what it  says. By default Firefox (popup) menus disappear when you use the  element picker, but you can make them stay around by activating this  setting. This makes finding elements and their ids or classes much  simpler.
-
-Reference:
-https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox
-https://developer.mozilla.org/en-US/docs/Tools/Style_Editor
