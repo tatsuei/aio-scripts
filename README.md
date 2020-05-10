@@ -25,7 +25,7 @@ Table of Contents
 
 A collection of PowerShell, CMD, and terminal (*nix) commands
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ## What's in this repo?
 - Batch files for zipping multiple folders (putting the contents into a folder or just straightup zipping the contents )
@@ -38,12 +38,12 @@ A collection of PowerShell, CMD, and terminal (*nix) commands
 - How to install rclone.exe as a Windows Service (either System or User service)
 - Batch file to convert multiple images using Inkscape (primarily .svg to .png)
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ## How to navigate this repo? 
 Click on the links below!
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ## Links
 
@@ -65,7 +65,7 @@ Click on the links below!
 
 [Rclone Sync - Videos](https://github.com/tatsuei/Scripts/blob/master/rclone-videos.bat) - A Windows batch file for syncing videos using Rclone
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ## Add metadata to MP4s (Windows)
 
@@ -78,7 +78,7 @@ Click on the links below!
 for /R "C:/FlutterDart" %%i in (*.mp4) do (AtomicParsley "%%i" --title "%%~ni" --overWrite)
 ```
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ## CMD Compilation
 
@@ -87,14 +87,14 @@ for /R "C:/FlutterDart" %%i in (*.mp4) do (AtomicParsley "%%i" --title "%%~ni" -
 - `cd /d "your directory here without quotes"` - changes the working directory with elevated permissions
 - `dir /s` - shows files in all subdirectories
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ### Copy/Move Files
 
 - `robocopy "source" "destination" "flags" ` e.g: `robocopy "c:/my folder" "d:/new folder" /E` <- this copies everything in "my folder"
 - `robocopy "c:/mysourcefolder" "c:/mydestinationfolder" /E /MOVE` to move all folders to the new directory
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ### Removing files/folders
 
@@ -102,7 +102,7 @@ for /R "C:/FlutterDart" %%i in (*.mp4) do (AtomicParsley "%%i" --title "%%~ni" -
   - `/s` - Removes all files/folders in the selected folder and deletes the folder itself
   - `/q` - Does the operation silently
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ## Inkscape image conversion (batch file)
 
@@ -160,7 +160,7 @@ echo %count% file(s) converted from %sourceType% to %outputType%!
 pause
 ```
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ## General Customisation (for all OSes)
 
@@ -176,7 +176,7 @@ pause
 6. Then click on the `+` button on the right hand side to input a HEX colour code (include the `#` symbol prefix).
 7. That's it! Close the `about:config` page, and try out `Ctrl+F`. Your chosen colour should be displayed now :D
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ### Tutorial for creating userChrome styles for Firefox
 
@@ -221,10 +221,10 @@ The toggle is called Disable Popup Auto-Hide and it does exactly what it  says. 
 
 Reference: https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox https://developer.mozilla.org/en-US/docs/Tools/Style_Editor
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
 
 ### Minimal Firefox userChrome style
 
 [Minimal Functional Fox](https://github.com/mut-ex/minimal-functional-fox) or [Minimal Functional Fox (Fork)](https://github.com/tatsuei/minimal-functional-fox)
 
-[Contents](#Table of Contents)
+[Contents](#Table-of-Contents)
