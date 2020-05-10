@@ -14,9 +14,11 @@ A collection of PowerShell, CMD, and terminal (*nix) commands
 ## How to navigate this repo? 
 Click on the links below!
 
+[toc] 
+
 ## Links
 
-[Add Metadata to MP4s](https://github.com/tatsuei/Scripts/blob/master/atomic-parsley-metadata.bat) - Use AtomicParsley to add metadata (Title, Artist, etc.) to MP4s.
+[Add metadata to MP4s (Windows)](https://github.com/tatsuei/Scripts/blob/master/atomic-parsley-metadata.bat) - Use AtomicParsley to add metadata (Title, Artist, etc.) to MP4s.
 
 [VLC Compilation](https://github.com/tatsuei/Scripts/blob/master/vlc-compilation.md) - A list of various settings/parameters related to VLC
 
@@ -34,3 +36,13 @@ Click on the links below!
 
 [Rclone Sync - Videos](https://github.com/tatsuei/Scripts/blob/master/rclone-videos.bat) - A Windows batch file for syncing videos using Rclone
 
+## Add metadata to MP4s (Windows)
+
+```
+// for = for loop
+// /R = recursive search (search within all sub-directories)
+// %%i = for loop variable
+// %%~ni = keep only the filename
+
+for /R "C:/FlutterDart" %%i in (*.mp4) do (AtomicParsley "%%i" --title "%%~ni" --overWrite)
+```
