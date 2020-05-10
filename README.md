@@ -1,4 +1,28 @@
+Table of Contents
+=================
+
+   * [Scripts](#scripts)
+      * [What's in this repo?](#whats-in-this-repo)
+      * [How to navigate this repo?](#how-to-navigate-this-repo)
+      * [Links](#links)
+      * [Add metadata to MP4s (Windows)](#add-metadata-to-mp4s-windows)
+      * [CMD Compilation](#cmd-compilation)
+         * [Directories](#directories)
+         * [Copy/Move Files](#copymove-files)
+         * [Removing files/folders](#removing-filesfolders)
+      * [Inkscape image conversion (batch file)](#inkscape-image-conversion-batch-file)
+      * [General Customisation (for all OSes)](#general-customisation-for-all-oses)
+      * [Firefox](#firefox)
+         * [Changing the Ctrl F (Finder) highlighting colour](#changing-the-ctrlf-finder-highlighting-colour)
+         * [Tutorial for creating userChrome styles for Firefox](#tutorial-for-creating-userchrome-styles-for-firefox)
+            * [Create the userChrome.css](#create-the-userchromecss)
+            * [Live-Testing styles](#live-testing-styles)
+               * [Pre-setup](#pre-setup)
+            * [Styling Context Menus / Popups](#styling-context-menus--popups)
+         * [Minimal Firefox userChrome style](#minimal-firefox-userchrome-style)
+
 # Scripts
+
 A collection of PowerShell, CMD, and terminal (*nix) commands
 
 ## What's in this repo?
