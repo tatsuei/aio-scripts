@@ -18,6 +18,8 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 6. Use the template provided for a quickstart.
 7. ***Use the latest release for newer Ubuntu distros***, if not you could try the older releases too!
 
+[Go to Top](#Ubuntu)
+
 ### 2. Changing the lockscreen background (Ubuntu 20.04)
 
 ***Note: GDM3 won't accept filenames with spaces!!! Change filenames to include dashes ( - ) or underscores ( _ ) to work with filenames with spaces :)***
@@ -29,9 +31,21 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 5. It would ask if you would like to restart the GDM service, so type `Y`. If it doesn't, type `systemctl restart gdm.service` to restart it manually.
 6. Wait for a bit and BOOM! You got yoself a nice new lockscreen :D
 
+[Go to Top](#Ubuntu)
+
 ### 3. DeadBeeF Custom Layout
 
 [deadbeef Arc Darker Theme](/home/tatsuei/Downloads/deadbeef-arc-darker-theme.txt)
+
+[Go to Top](#Ubuntu)
+
+### 4. Getting Apps to Obey System Themes (Using Qt5 and GTK-2)
+
+1. Open up a terminal and run this first: `sudo apt-get update`
+2. Then type this once that's done: `sudo apt-get install qt5-style-plugins`
+3. Set all Qt5 applications to use the system theme by doing: `echo "export QT_QPA_PLATFORMTHEME=gtk2" >> ~/.profile` 
+4. Once that's squared away, L O G O U T.
+5. Log back in... and??? :money_mouth_face:
 
 ## Shortcuts (Ubuntu 20.04)
 
@@ -47,6 +61,8 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 3. A new window will appear. Try scrolling through the categories on the left pane till you find "Keyboard Shortcuts" or something to that effect :stuck_out_tongue_closed_eyes:. 
 4.  
 
+[Go to Top](#Ubuntu)
+
 ## Printing SysInfo
 
 1. Install `neofetch` if you haven't done yet! Here's [a link](https://github.com/dylanaraps/neofetch/wiki/Installation#universal-install) to the instructions! Or you could follow the steps below.
@@ -56,11 +72,15 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 1. Update yo repositories! `sudo apt update`
 2. Get that stuff in you! `sudo apt install neofetch`
 
+[Go to Top](#Ubuntu)
+
 ### Ubuntu 16.10 and below
 
 1. Add the official PPA! `sudo add-apt-repository ppa:dawidd0811/neofetch`
 2. Update yo repositories! `sudo apt update`
 3. Get that stuff in you! `sudo apt install neofetch`
+
+[Go to Top](#Ubuntu)
 
 ## Installing fonts
 
@@ -69,9 +89,13 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 3. Open a terminal, and type `fc-cache -f -v`
 4. Enjoy your new fonts!
 
+[Go to Top](#Ubuntu)
+
 ## Missing System Tray Icons?
 
 1. Install one of these two: [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/) or [KStatusNotifierItem/AppIndicator Support](https://extensions.gnome.org/extension/615/appindicator-support/) either from source (on Github) or from the Gnome Extensions page.
+
+[Go to Top](#Ubuntu)
 
 ## Auto-connect Bluetooth Devices
 
@@ -169,4 +193,6 @@ Comment=Connects to Galaxy Buds
 
 12. Save the file, and then exit the editor.
 13. Reboot your computer, and see the magic happen(?) :)
+
+[Go to Top](#Ubuntu)
 
