@@ -1,4 +1,22 @@
-[toc] 
+Table of Contents
+=================
+
+   * [Ubuntu](#ubuntu)
+      * [Ubuntu/Mint Tips](#ubuntumint-tips)
+      * [Customisation](#customisation)
+         * [1. Changing Windows Cursors for Ubuntu](#1-changing-windows-cursors-for-ubuntu)
+         * [2. Changing the lockscreen background (Ubuntu 20.04)](#2-changing-the-lockscreen-background-ubuntu-2004)
+         * [3. DeadBeeF Custom Layout](#3-deadbeef-custom-layout)
+         * [4. Getting Apps to Obey System Themes (Using Qt5 and GTK-2)](#4-getting-apps-to-obey-system-themes-using-qt5-and-gtk-2)
+      * [Shortcuts (Ubuntu 20.04)](#shortcuts-ubuntu-2004)
+         * [1. Moving Windows between Workspaces](#1-moving-windows-between-workspaces)
+         * [2. Custom Key Mappings](#2-custom-key-mappings)
+      * [Printing SysInfo](#printing-sysinfo)
+         * [Ubuntu 17.04 and up](#ubuntu-1704-and-up)
+         * [Ubuntu 16.10 and below](#ubuntu-1610-and-below)
+      * [Installing fonts](#installing-fonts)
+      * [Missing System Tray Icons?](#missing-system-tray-icons)
+      * [Auto-connect Bluetooth Devices](#auto-connect-bluetooth-devices)
 
 # Ubuntu
 
