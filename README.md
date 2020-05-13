@@ -1,6 +1,7 @@
 Table of Contents
 =================
 
+   * [Table of Contents](#table-of-contents)
    * [Scripts](#scripts)
       * [What's in this repo?](#whats-in-this-repo)
       * [How to navigate this repo?](#how-to-navigate-this-repo)
@@ -11,7 +12,7 @@ Table of Contents
          * [Copy/Move Files](#copymove-files)
          * [Removing files/folders](#removing-filesfolders)
       * [Inkscape image conversion (batch file)](#inkscape-image-conversion-batch-file)
-      * [General Customisation (for all OSes)](#general-customisation-for-all-oses)
+   * [General Customisation (for all OSes)](#general-customisation-for-all-oses)
       * [Firefox](#firefox)
          * [Changing the Ctrl F (Finder) highlighting colour](#changing-the-ctrlf-finder-highlighting-colour)
          * [Tutorial for creating userChrome styles for Firefox](#tutorial-for-creating-userchrome-styles-for-firefox)
