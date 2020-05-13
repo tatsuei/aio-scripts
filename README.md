@@ -23,7 +23,7 @@ Table of Contents
 
 # Scripts
 
-A collection of PowerShell, CMD, and terminal (*nix) commands
+A personal collection of batch files, scripts, commands, instructions, and manuals for Windows and *nix based systems!
 
 [Table of Contents](#Table-of-Contents)
 
@@ -162,7 +162,7 @@ pause
 
 [Table of Contents](#Table-of-Contents)
 
-## General Customisation (for all OSes)
+# General Customisation (for all OSes)
 
 ## Firefox
 
