@@ -65,6 +65,15 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 4. Once that's squared away, L O G O U T.
 5. Log back in... and??? :money_mouth_face:
 
+### 5. Creating custom terminal commands
+
+1. Open a terminal window and create a .bash_aliases file in your home directory: `gedit ~/.bash_aliases`
+2. Once the editor is open, add this: `alias your_alias_name='your_terminal_command; second_terminal_command'`
+3. Once you're done, save the file: `Ctrl + S` and exit.
+4. In the terminal window, type this: `. ~/.bashrc` to refresh your .bashrc file.
+5.  Try using your new alias in terminal by typing `your_alias_name` in the terminal to confirm it works.
+6. E N J O Y :smiley:
+
 ## Shortcuts (Ubuntu 20.04)
 
 ### 1. Moving Windows between Workspaces
