@@ -163,6 +163,14 @@ pause
 
 [Table of Contents](#Table-of-Contents)
 
+## Fixing python not found error for youtube-dl
+
+1. Open up a terminal.
+2. Type `which python` for python2.x and `which python3` for python3.x to see which version of Python you're running.
+3. Create a symbolic link between the installation path of Python and the local python directory by typing `sudo ln -s /usr/bin/python3 /usr/local/bin/python`. 
+4. Type `youtube-dl` to test it out.
+5. Enjoy!
+
 # General Customisation (for all OSes)
 
 ## Firefox
