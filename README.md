@@ -171,6 +171,25 @@ pause
 4. Type `youtube-dl` to test it out.
 5. Enjoy!
 
+## Rebuilding .bashrc for all open terminal tabs/windows
+
+1. The following steps enable the system to check `.bashrc`'s modification time and compare it to the modtime of the last sourced version of `.bashrc`. 
+
+2. Open a text editor or simply type `gedit ~/.bashrc` in a terminal. Note that the preceding tilde `~` and forward slash `/` denote the `home` directory, and can be omitted if your terminal is already in the `home` directory.
+
+3. Append this to the end of the `.bashrc` file:
+
+   ```bsh
+   bashrc_sourced=$(stat -c %Y ~/.bashrc)
+   
+   PROMPT_COMMAND='
+       test $(stat -c %Y ~/.bashrc) -ne $bashrc_sourced && source ~/.bashrc
+   '
+   ```
+
+4. Finally, type in `. ~/.bashrc` to source the file.
+5. Cheers!
+
 # General Customisation (for all OSes)
 
 ## Firefox
