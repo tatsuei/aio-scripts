@@ -105,7 +105,7 @@ for /R "C:/FlutterDart" %%i in (*.mp4) do (AtomicParsley "%%i" --title "%%~ni" -
 
 [Table of Contents](#Table-of-Contents)
 
-## Inkscape image conversion (batch file)
+## Converting images using Inkscape
 
 ```
 @Echo off
