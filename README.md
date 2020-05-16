@@ -28,12 +28,12 @@ A personal collection of batch files, scripts, commands, instructions, and manua
 
 [Table of Contents](#Table-of-Contents)
 
-## What's in this repo?
-- Batch files for zipping multiple folders (putting the contents into a folder or just straightup zipping the contents )
+## What's in this section?
+- Batch files for zipping multiple folders (putting the contents into a folder or just straight up zipping the contents )
 - Shell commands for Android animation scales (window, transition, animator) 
-- Powershell commands to rename multiple filenames
-- Powershell commands to add pre/suffixes to file/folder names
-- Powershell commands to create multiple folders
+- PowerShell commands to rename multiple filenames
+- PowerShell commands to add pre/suffixes to file/folder names
+- PowerShell commands to create multiple folders
 - How to change VLC's absolute playlist paths to relative ones
 - How to convert videos using FFMPEG
 - How to install rclone.exe as a Windows Service (either System or User service)
@@ -256,3 +256,5 @@ Reference: https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox https:
 [Minimal Functional Fox](https://github.com/mut-ex/minimal-functional-fox) or [Minimal Functional Fox (Fork)](https://github.com/tatsuei/minimal-functional-fox)
 
 [Table of Contents](#Table-of-Contents)
+
+# [Linux Tips](https://github.com/tatsuei/tutorials/blob/master/linux-tips.md)
