@@ -22,7 +22,9 @@ Table of Contents
 
 ## Installation
 
-### Fixing the "no public key" issue during the pre-installation phase
+### Pre-installation
+
+#### Fixing the "no public key" issue during the pre-installation phase
 
 1. On Debian-based operating systems, GnuPG is already installed as part of the distro. GnuPG for modern systems kinda takes away the User ID of each key so issues may occur. To fix this, we have to import the public key `4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC` mentioned in the terminal output when trying to run this command  `gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig`.
 
