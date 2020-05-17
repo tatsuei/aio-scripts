@@ -24,16 +24,9 @@ Table of Contents
 
 # Scripts
 
-A personal collection of batch files, scripts, commands, instructions, and manuals for Windows and *nix based systems!
-
-[Table of Contents](#Table-of-Contents)
-
 ## What's in this section?
 - Batch files for zipping multiple folders (putting the contents into a folder or just straight up zipping the contents )
 - Shell commands for Android animation scales (window, transition, animator) 
-- PowerShell commands to rename multiple filenames
-- PowerShell commands to add pre/suffixes to file/folder names
-- PowerShell commands to create multiple folders
 - How to change VLC's absolute playlist paths to relative ones
 - How to convert videos using FFMPEG
 - How to install rclone.exe as a Windows Service (either System or User service)
@@ -188,9 +181,20 @@ pause
    ```
 
 4. Finally, type in `. ~/.bashrc` to source the file.
+
 5. Cheers!
 
+# Commands
+
+## What's in this section?
+
+- PowerShell commands to rename multiple filenames
+- PowerShell commands to add pre/suffixes to file/folder names
+- PowerShell commands to create multiple folders
+
 # General Customisation (for all OSes)
+
+## What's in this section?
 
 ## Firefox
 
