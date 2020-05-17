@@ -94,6 +94,11 @@ This section is meant for all Linux distros!
 
 6. You're done!
 
+### Mount the file systems 
+
+1. To create the EFI mount point, type this `mkdir -p /mnt/efi` in the terminal.
+2. Then to mount the directory, type this `mount /dev/sda1 /mnt/efi`. 
+
 # Ubuntu
 
 ## Ubuntu/Mint Tips
