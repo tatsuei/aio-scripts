@@ -1,6 +1,13 @@
 Table of Contents
 =================
 
+   * [Table of Contents](#table-of-contents)
+   * [General](#general)
+      * [Configuring GnuPG Keyservers](#configuring-gnupg-keyservers)
+   * [Arch Linux](#arch-linux)
+      * [Installation](#installation)
+         * [Pre-installation](#pre-installation)
+            * [Fixing the "no public key" issue during the pre-installation phase](#fixing-the-no-public-key-issue-during-the-pre-installation-phase)
    * [Ubuntu](#ubuntu)
       * [Ubuntu/Mint Tips](#ubuntumint-tips)
       * [Customisation](#customisation)
@@ -8,6 +15,7 @@ Table of Contents
          * [2. Changing the lockscreen background (Ubuntu 20.04)](#2-changing-the-lockscreen-background-ubuntu-2004)
          * [3. DeadBeeF Custom Layout](#3-deadbeef-custom-layout)
          * [4. Getting Apps to Obey System Themes (Using Qt5 and GTK-2)](#4-getting-apps-to-obey-system-themes-using-qt5-and-gtk-2)
+         * [5. Creating custom terminal commands](#5-creating-custom-terminal-commands)
       * [Shortcuts (Ubuntu 20.04)](#shortcuts-ubuntu-2004)
          * [1. Moving Windows between Workspaces](#1-moving-windows-between-workspaces)
          * [2. Custom Key Mappings](#2-custom-key-mappings)
@@ -53,6 +61,8 @@ This section is meant for all Linux distros!
    ```
 
 10. Enjoy! :)
+
+11. You could refer to [this website](https://riseup.net/en/security/message-security/openpgp/best-practices#use-the-sks-keyserver-pool-instead-of-one-specific-server-with-secure-connections) for **really** detailed instructions!
 
 # Arch Linux
 
