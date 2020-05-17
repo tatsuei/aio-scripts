@@ -18,6 +18,42 @@ Table of Contents
       * [Missing System Tray Icons?](#missing-system-tray-icons)
       * [Auto-connect Bluetooth Devices](#auto-connect-bluetooth-devices)
 
+# General
+
+This section is meant for all Linux distros!
+
+## Configuring GnuPG Keyservers
+
+1. This assumes you have installed or already have GnuPG on your system. You could verify the installation by typing this `gpg --version` into a terminal!
+
+2. Open a terminal and type `sudo apt-get install gnupg-curl` for 16.04 and earlier or `sudo apt install gnupg-curl` for 18.04 and later. 
+
+3. Changing the working directory and downloading the SKS CA (Certificate Authorities) by typing this `cd ~/.gnupg; wget https://sks-keyservers.net/sks-keyservers.netCA.pem`
+
+4. (OPTIONAL) Verify the CA by going to [this website](https://sks-keyservers.net/verify_tls.php) and getting the OpenPGP key. Note that you could continue verifying it if needed, but [read this post](https://superuser.com/a/1362835) to see why you don't have to. 
+
+5. Add this line `keyserver hkps://hkps.pool.sks-keyservers.net` to `~/.gnupg/gpg.conf` by typing in the terminal `gedit ~/.gnupg/gpg.conf`. 
+
+6. (FOR GnuPG 1 ONLY) Add this line `keyserver-options ca-cert-file=/home/.../.gnupg/sks-keyservers.netCA.pem` to `~/.gnupg/gpg.conf`.
+
+7. (FOR GnuPG 2 ONLY) Add these lines to `~/.gnupg/dirmngr.conf`: (remember to replace `...` with your username!)
+
+   ```bash
+   keyserver hkps://hkps.pool.sks-keyservers.net
+   hkp-cacert /home/.../.gnupg/sks-keyservers.netCA.pem
+   ```
+
+8. Then, type `gpg --recv-keys 4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC` to verify the keyserver was configured correctly.
+
+9. If that doesn't work, then try searching for and adding the key manually by typing this:
+
+   ```bash
+   curl 'http://pgp.surfnet.nl:11371/pks/lookup?op=get&search=4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC' > name.key
+   gpg --import name.key
+   ```
+
+10. Enjoy! :)
+
 # Arch Linux
 
 ## Installation
