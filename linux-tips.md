@@ -18,6 +18,34 @@ Table of Contents
       * [Missing System Tray Icons?](#missing-system-tray-icons)
       * [Auto-connect Bluetooth Devices](#auto-connect-bluetooth-devices)
 
+# Arch Linux
+
+## Installation
+
+### Fixing the "no public key" issue during the pre-installation phase
+
+1. On Debian-based operating systems, GnuPG is already installed as part of the distro. GnuPG for modern systems kinda takes away the User ID of each key so issues may occur. To fix this, we have to import the public key `4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC` mentioned in the terminal output when trying to run this command  `gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig`.
+
+2. Download the Arch Linux .iso file and its corresponding PGP key from the [downloads page](https://www.archlinux.org/download/).  
+
+3. Open up a terminal, and type this `gpg --keyserver pool.sks-keyservers.net --recv-keys 4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC` to import the Arch Linux public key.
+
+4. Then type this `gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig`, replacing `archlinux-version-x86_64.iso.sig` with the downloaded signature filename to verify the file's signature. 
+
+5. Once this is done the output should be similar to this: 
+
+   ```bash
+   gpg: assuming signed data in 'archlinux-2020.05.01-x86_64.iso'
+   gpg: Signature made Fri 01 May 2020 13:33:57 +08
+   gpg:                using RSA key 4AA4767BBC9C4B1D18AE28B77F2D434B9741E8AC
+   gpg: Good signature from "Pierre Schmitz <pierre@archlinux.de>" [unknown]
+   gpg: WARNING: This key is not certified with a trusted signature!
+   gpg:          There is no indication that the signature belongs to the owner.
+   Primary key fingerprint: 4AA4 767B BC9C 4B1D 18AE  28B7 7F2D 434B 9741 E8AC
+   ```
+
+6. You're done!
+
 # Ubuntu
 
 ## Ubuntu/Mint Tips
