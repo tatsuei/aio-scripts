@@ -155,6 +155,24 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 5.  Try using your new alias in terminal by typing `your_alias_name` in the terminal to confirm it works.
 6. E N J O Y :smiley:
 
+### 6. Adding a dock to your second monitor
+
+1. Do check if you have `dconf-editor` installed before doing this :) 
+2. Installing `dconf-editor` can be done by running this in a terminal: `sudo apt update -y && sudo apt install dconf-editor -y`
+3. Change your working directory to the `/planks/docks/` folder: `cd ~/.config/planks/docks` and make a new folder: `mkdir dock2`, then copy the launcher items from your main dock: `cp dock1/launchers dock2/launchers` 
+4. Then open a terminal and open the `configuration editor` by typing `dconf-editor` in the terminal
+5. There's gonna be a window popping up, with a message warning you that some apps would break with modified settings. Press `"I'll be careful."`
+6. In the top centre bar, press the magnifying glass and enter `/net/launchpad/plank/docks/` 
+7. In the results, there will be an entry for `enabled-docks`. Click that T H A N G!
+8. Click the `Use default value` switch to enable custom values, and add `,'dock2'` to `'dock1'`.
+9. Once that's done, click `Apply` on the bottom left hand corner.
+10. Let's take a short detour back to the terminal, and get the second monitor's name by `plank --preferences`.
+11. A new window will pop up, and there will be a row with a `On Primary Display` switch. Next to it is the active monitors in a dropdown menu. Click on the dropdown menu, and it should list the displays in this manner: `eDP-1` `HDMI-X`. Usually the second monitor would be the `HDMI-X` entry. Note this down!
+12. Now, click on the `plank` folder up top (upper left corner), click on `docks`, then on `dock2`. There's a buncha settings we gotta change!
+13. First, you might want to change the icon size (`icon-size`)to a suitable size for your external monitor (if you're using a smaller screen like a laptop screen). Next, change the `monitor` value to reflect the value you got in step 11. Finally, change the `theme` to match your current dock theme. That's it!
+14. Back to your terminal! Let's restart the `Plank` dock shall we? `pkill plank` and then `plank &` and press `Enter` or `Return` once it loads up!
+15. You'll be able to see your second dock now! Enjoy :D 
+
 ## Shortcuts (Ubuntu 20.04)
 
 ### 1. Moving Windows between Workspaces
