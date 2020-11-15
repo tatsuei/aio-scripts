@@ -11,7 +11,7 @@ Table of Contents
 
 ## Listing Files
 
-This section documents commands and various flags used in listing files and folders. Commands include `ls` and `tree`.
+This section documents commands and various flags used in listing files and folders. Commands include `ls` and `tree`. [back to Top!](#Table-of-Contents)
 
 | Command          | Function                                                     |
 | ---------------- | ------------------------------------------------------------ |
@@ -42,7 +42,7 @@ This section documents commands and various flags used in listing files and fold
 ls -lt | head	
 ```
 
-This combines the `l` and `t` flags along with a `head` flag. `head` by default prints the first 10 lines/files.
+This combines the `l` and `t` flags along with a `head` flag. `head` by default prints the first 10 lines/files. [back to Top!](#Table-of-Contents)
 
 ### Listing all files and folders!
 
@@ -50,13 +50,13 @@ This combines the `l` and `t` flags along with a `head` flag. `head` by default 
 ls -a 
 ```
 
-Using the `a` flag would list *ALL* files in the directory, including `.` and `..` which represent the `current directory` and the `parent directory`!
+Using the `a` flag would list *ALL* files in the directory, including `.` and `..` which represent the `current directory` and the `parent directory`! 
 
 ```bash
 ls -A
 ```
 
-`-a`'s big bro would omit the current and parent directories `.` and `..` while listing everything else!
+`-a`'s big bro would omit the current and parent directories `.` and `..` while listing everything else! [back to Top!](#Table-of-Contents)
 
 ### Listing files WITHOUT ls!
 
@@ -86,7 +86,7 @@ echo "$file"
 done
 ```
 
-This script captures files in the current directory, storing them in a variable for processing.
+This script captures files in the current directory, storing them in a variable for processing. [back to Top!](#Table-of-Contents)
 
 ### 
 
