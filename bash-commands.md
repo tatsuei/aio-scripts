@@ -1,21 +1,22 @@
+[TOC]
+
 # List of Bash Commands
 
 ## Listing Files
 
-| Command  | Function                                                     |
-| -------- | ------------------------------------------------------------ |
-| `ls`     | Lists all files and directories, excluding dotfiles `.` and `..` |
-| `ls -a`  | List all entries including **.** and **..**                  |
-| `ls -A`  | List all entries excluding **.** and **..**                  |
-| `ls -c`  | Sort files by change time                                    |
-| `ls -d ` | List directory entries                                       |
-| `ls -h`  | Show filesizes in KB, MB, GB etc.                            |
-| `ls -H`  | Same as ls -h, using powers of 1,000 instead of 1,024        |
-| `ls -l`  | Show contents in long-listing format                         |
-| `ls -o`  | Long-listing format without groups.                          |
+This section documents commands and various flags used in listing files and folders. Commands include `ls` and `tree`.
 
 | Command          | Function                                                     |
 | ---------------- | ------------------------------------------------------------ |
+| `ls`             | Lists all files and directories, excluding dotfiles `.` and `..` |
+| `ls -a`          | List all entries including **.** and **..**                  |
+| `ls -A`          | List all entries excluding **.** and **..**                  |
+| `ls -c`          | Sort files by change time                                    |
+| `ls -d `         | List directory entries                                       |
+| `ls -h`          | Show filesizes in KB, MB, GB etc.                            |
+| `ls -H`          | Same as ls -h, using powers of 1,000 instead of 1,024        |
+| `ls -l`          | Show contents in long-listing format                         |
+| `ls -o`          | Long-listing format without groups.                          |
 | `ls -r`          | Show contents in reverse order.                              |
 | `ls -s`          | Print size of each file in blocks.                           |
 | `ls -S`          | Sort by files size                                           |
@@ -25,6 +26,8 @@
 | `ls -v `         | Sort by version                                              |
 | `ls -1`          | List one file per line                                       |
 | `tree`           | Lists the contents of the current directory in a tree format |
+| `tree -L n`      | Lists contents based on `n` levels.                          |
+| `tree -d`        | Lists directories only.                                      |
 
 ### Listing the ten most recently modified files!
 
