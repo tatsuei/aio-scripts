@@ -1,4 +1,11 @@
-[TOC]
+Table of Contents
+=================
+
+   * [List of Bash Commands](#list-of-bash-commands)
+      * [Listing Files](#listing-files)
+         * [Listing the ten most recently modified files!](#listing-the-ten-most-recently-modified-files)
+         * [Listing all files and folders!](#listing-all-files-and-folders)
+         * [Listing files WITHOUT ls!](#listing-files-without-ls)
 
 # List of Bash Commands
 
