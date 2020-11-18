@@ -6,6 +6,12 @@ Table of Contents
       * [Listing the ten most recently modified files!](#listing-the-ten-most-recently-modified-files)
       * [Listing all files and folders!](#listing-all-files-and-folders)
       * [Listing files WITHOUT ls!](#listing-files-without-ls)
+   * [Using cat (no not that cat.)](#using-cat-no-not-that-cat)
+      * [Let's concatenate some files!](#lets-concatenate-some-files)
+      * [Displaying the file contents](#displaying-the-file-contents)
+      * [Writing to a file?](#writing-to-a-file)
+   * [Appendix](#appendix)
+      * [M-notation](#m-notation)
 
 # Listing Files
 
