@@ -13,7 +13,9 @@ Table of Contents
    * [Appendix](#appendix)
       * [M-notation](#m-notation)
 
-# Listing Files
+# Navigating folders
+
+## Listing Files
 
 This section documents commands and various flags used in listing files and folders. Commands include `ls` and `tree`. 
 
@@ -104,9 +106,270 @@ echo "$file"
 done
 ```
 
-This script captures files in the current directory, storing them in a variable for processing. 
+This script captures files in the current directory, storing them in a variable for processing.  
 
 [Table of Contents!](#Table-of-Contents)
+
+## Navigating files using less^1^
+
+```bash
+less file_name.txt
+```
+
+Subbing in `oneliners.txt` as an example would return something like this: 
+
+```bash
+# Remove text in between the two periods "." and before the file extension (.gif)
+for f in ./*; do mv "$f" "${f%.*.gif}.gif" ; done
+
+# Remove text in between the filename and the extension .svg
+for file in *; do mv "${Jvcki Wai - [2016.11.02] - EXPOSURE - [FLAC - 44.1kHz - 16bit]}" "${Jvcki Wai - [2016.11.02] - //\EXPOSURE//\ - [FLAC - 44.1kHz - 16bit]/}"; done
+
+oneliners.txt (END)
+```
+
+| **Command**           | **Action**                                                   |
+| --------------------- | ------------------------------------------------------------ |
+| `PageUp` or `b`       | Scroll back one page                                         |
+| `PageDown` or `space` | Scroll forward one page                                      |
+| `G`                   | Go to the end of the text file *Note that this and the below commands use capital Gs. |
+| `1G`                  | Go to the beginning of the text file                         |
+| `/your_characters`    | Search forward in the text file for an occurrence of the specified *characters* |
+| `n`                   | Repeat the previous search                                   |
+| `h`                   | Brings up the user manual                                    |
+| `q`                   | Quit `less`                                                  |
+
+## Determining filetypes using file^2^
+
+```bash
+file name_of_file.*
+```
+
+This command will determine the filetype for us, so try it out and sub the asterisk `*` for your file extension!
+
+| **File Type**                  | **Description**                                              | **Viewable as text?**              |
+| ------------------------------ | ------------------------------------------------------------ | ---------------------------------- |
+| ASCII text                     | The name says it all!                                        | yes                                |
+| Bourne-Again shell script text | A `bash` script                                              | yes                                |
+| ELF 64-bit LSB executable      | An executable binary program                                 | no                                 |
+| ELF 64-bit LSB shared object   | A shared library                                             | no                                 |
+| GNU tar archive                | A tape archive file. A common way of storing groups of files. | no, use `tar tvf` to view listing. |
+| gzip compressed data           | An archive compressed with `gzip`                            | no                                 |
+| HTML document text             | A web page                                                   | yes                                |
+| JPEG image data                | A compressed JPEG image                                      | no                                 |
+| PostScript document text       | A PostScript file                                            | yes                                |
+| Zip archive data               | An archive compressed with `zip`                             | no                                 |
+
+These are just some examples of (somewhat?) common files found in a typical user `dir`.
+
+**1, 2**: [Looking around](http://linuxcommand.org/lc3_lts0030.php) William E. Shotts, Jr. 
+
+# Peek inside system directories^3^
+
+| **Directory**        | **Description**                                              |
+| -------------------- | ------------------------------------------------------------ |
+| `/`                  | The root `dir` where the file system begins. Usually(*) this `dir` houses subdirectories and nothing else. |
+| `/boot`              | Linux kernel and bootloader files are kept in this folder, where the kernel is a file called `vmlinuz`. |
+| `/etc`               | `dir` containing configuration files (`.config` or `.conf`) for the system. All files in this `dir` should be `.txt` text files. <br /> `/etc/passwd` contains user info and is where user accounts are defined. <br /> `/etc/fstab` contains a table of devices that are mounted (such as external HDDs or sharepoints like `smb`) when the system boots up. This file contains the drives' information. <br /> `/etc/hosts` lists the hostnames and IP addresses that are intrinsically known to the system. <br /> `/etc/init.d` contains scripts that start system services upon startup. |
+| `/bin`, `/usr/bin`   | They contain most programs for the system; `bin` keeping the essentials for normal operation, and `/usr/bin` safeguards the user applications. |
+| `/sbin`, `/usr/sbin` | These two contain programs for `sysadmin` work, mostly for `superuser` use. |
+| `/usr`               | It has a buncha stuff. <br /> `/usr/share/X11` supports files for the `X Window` system. <br /> `/usr/share/dict` has dictionaries for spellchecking! Check out `look` and `aspell` from the terminal if curious ;) <br /> `/usr/share/doc` has various doc files in various formats. <br />`/usr/share/man` keeps user manual files. |
+| `/usr/local`         | This `dir` along with its siblings are used for software installs and misc files on the local system. Files which do not come bundled with the distro will go here. <br />It's good practice to sideload apps into the `/usr/local/bin` folder for easy management. |
+| `/var`               | As the foldername suggests, files in here are `varied` as they tend to change while the system is running. <br />`/var/log` contains log files which are updated on-the-fly. Check these out once in a while to see what's up with your system's health. <br />`/var/spool` holds files that are queued for a process, such as mail messages and print jobs. |
+| `/lib`               | Contains the Linux equivalent of DLLs (shared libraries)     |
+| `/home`              | User files are kept here, so this *should* be the only place users can modify files! |
+| `/root`              | Superuser's home directory.                                  |
+| `/tmp`               | Temporary files created by programs are kept here.           |
+| `/dev`               | A special directory which does not contain files (most of the time). Devices available to the system live here, and are treated like files. e.g: `/dev/sda` is the first hard drive, `/dev/sda1` is the second, and so on. |
+| `/proc`              | Another special place, it doesn't exist (it's virtual so...). It contains a group of numbered entries that correspond to all the running processes. Some of these allow access to the current system configuration! Try looking at `/proc/cpuinfo`, which will detail what the kernel thinks of the CPU. |
+| `/media`             | A normal directory used specially for mount points, which include external HDDs, and USB devices. <br />Upon system startup, a list of mounting instructions in the `/etc/fstab` file is passed to the system. This list describes the mount points for each device. TL;DR: `/media` is used by the auto-mount mechanism found in modern Linux distros. P.S Check out `mount`! |
+
+**3**: [A Guided Tour](http://linuxcommand.org/lc3_lts0040.php) William E. Shotts, Jr.
+
+# File manipulation^4^
+
+## Wildcards
+
+Wildcards are a set of special characters which allow selection of filenames based on a certain pattern. 
+
+| **Wildcard**    | **Meaning**                                                  |
+| --------------- | ------------------------------------------------------------ |
+| `*`             | Matches any character(s)                                     |
+| `?`             | Matches any single character                                 |
+| `[characters]`  | Matches any character that is a member of the set `characters`. This set may be expressed as a *POSIX character class* such as:<br />`[:alnum:]` - Alphanumeric characters<br />`[:alpha:]` - Alphabetic characters<br />`[:digit:]` - Numerals<br />`[:upper:]` - Uppercase alphabetic characters<br />`[:lower:]` - Lowercase alphabetic characters |
+| `[!characters]` | Matches any character that is not a member of the set `characters` |
+
+Here are some examples of selection criteria made for filenames:
+
+| **Pattern**                     | **Matches**                                                  |
+| ------------------------------- | ------------------------------------------------------------ |
+| `*`                             | Everything                                                   |
+| `g*`                            | Everything beginning with "g"                                |
+| `b*.txt`                        | Everything beginning with "b" with the `.txt` extension      |
+| `Data???`                       | Everything that begins with "Data" followed by three more characters. The `?` denotes a character regardless of case, be it a symbol, number, or letter. |
+| `[abc]*`                        | Everything that begins with "a" or "b" or "c" followed by any characters. |
+| `[[:upper:]]*`                  | Everything that begins with an uppercase letter. Also an example of a character class! |
+| `BACKUP.[[:digit:]][[:digit:]]` | Another example of character classes which matches everything beginning with "BACKUP" followed by two numbers. |
+| `*[![:lower:]]`                 | Everything that doesn't end with a lowercase letter.         |
+
+## cp
+
+Stands for "copy". 
+
+| **Command**         | **Results**                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `cp file1 file2`    | Copies everything in `file1` into `file2` if `file2` exists, otherwise `file2` will be created on the spot. `file2` will be overwritten using the stuff in `file1`. |
+| `cp -i file1 file2` | The `-i` (interactive) flag will produce a confirmation prompt before `file2` is overwritten by the contents of `file1`. |
+| `cp file1 dir1`     | Copy everything in `file1` into a new file `file1` inside the directory `dir1`. |
+| `cp -R dir1 dir2`   | Copy the contents of `dir1` into `dir2`. If `dir2` doesn't exist, it is created. Otherwise, a new directory `dir1` will be created inside `dir2`. |
+
+## mv
+
+Moves or renames files and directories! 
+
+| **Command**           | **Results**                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| `mv file1 file2`      | Renames `file1` to `file2` if `file2` doesn't exist. If `file2` exists, its contents are overwritten by `file1`. |
+| `mv -i file1 file2`   | `-i` produces a confirmation prompt if `file2` exists, asking the user if it's okay to overwrite `file2` with `file1`'s contents. |
+| `mv file1 file2 dir1` | Moves `file1` and `file2` to a directory `dir1`. If `dir1` doesn't exist, `mv` will exit with an error. |
+| `mv dir1 dir2`        | If `dir2` doesn't exist, `dir1` will be renamed `dir2`. If `dir2` exists, then `dir1` will be moved into `dir2`. |
+
+## rm
+
+Removes files and directories (be careful!)
+
+| **Command**         | **Results**                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `rm file1 file2`    | Delete both files.                                           |
+| `rm -i file1 file2` | A confirmation prompt is presented before deleting each file. |
+| `rm -r dir1 dir2`   | Deletes everything inside the two directories with the `-r` flag performing a recursive search into both directories. |
+
+When considering the use of `rm` for file/folder removal, do a quick `ls` equivalent of the command you wish to use with `rm`, and once you're sure of the selection, recall the previous command and sub `ls` for `rm`!
+
+## mkdir
+
+Creates directories, 'nuff said.
+
+| **Command**            | **Results**                                                  |
+| ---------------------- | ------------------------------------------------------------ |
+| `cp *.txt text_files`  | Copies all text (.txt) files in the current folder over to a folder called "text_files". |
+| `mv dir ../*.bak dir2` | Moves `dir1` and all `.bak` files in the current folder's parent directory to a folder named `dir2`. |
+| `rm *~`                | Deletes all files in the current folder that end with the character "~". Some applications create backup files using this naming scheme. |
+
+**4:** [Manipulating Files](http://linuxcommand.org/lc3_lts0050.php) William E. Shotts, Jr.
+
+# Using commands^5^
+
+## type
+
+Displays the kind of command the shell will execute, an example would be like `type <command>`.
+
+```bash
+cal@haus:~$ type type > commands.txt
+type is a shell builtin
+cal@haus:~$type dir
+dir is /usr/bin/dir
+cal@haus:~$type typora
+typora is aliased to `typora &'
+```
+
+Try typing `ls` and `dir --color=auto`; are these two commands the same? 
+
+## which
+
+Is useful for determining which version of a program is currently used (or referrerd to).
+
+```bash
+cal@haus:~$ which python
+/usr/local/bin/python
+cal@haus:~$ which python3
+/usr/bin/python3
+cal@haus:~$ which pip3
+/usr/bin/pip3
+```
+
+## help
+
+Is a user manual which is built-in for many apps. In newer Ubuntu versions, `help` is equivalent to `help -m`.
+
+## --help
+
+An alternative to when `help` doesn't work as intended.
+
+## man
+
+Opens the manual entry (if included) for any executable program.
+
+**5**: [Working with Commands](http://linuxcommand.org/lc3_lts0060.php) William E. Shotts, Jr.
+
+# Input & Output
+
+## Standard output (stdout)
+
+Almost all commands display results via the standard output `stdout`. To redirect this output to a file (for logging perhaps?), use the `>` operator:
+
+```bash
+tatsuei@eijihaus:~$ ls > files.txt
+```
+
+And a list of all files and subdirectories in the current directory will be listed in this text file.
+
+If you would like to add new results to the file (such as when new folders/files are created), simply add another `>` operator!
+
+```
+tatsuei@eijihaus:~$ ls >> files.txt
+```
+
+## Standard input(stdin)
+
+Like `stdout`, `stdin` can be redirected from a file or keystrokes.
+
+```bash
+tatsuei@eijihaus:~$ sort < files.txt
+```
+
+This would sort the contents (default is A-Z) of the file. Alternatively, if you would like the sorted contents in a different file for further processing, try:
+
+```bash
+tatsuei@eijihaus:~$ sort < files.txt > sorted_files.txt
+```
+
+## Pipelines
+
+Used when connecting multiple commands together to form *pipelines*. The output of a command is fed directly into the input of another command, creating a chain!
+
+```bash
+tatsuei@eijihaus:~$ ls -l | less
+```
+
+In any case, the commands can be reversed as long as the pipe operator `|` is put in the right places!
+
+| **Command**                     | **What it does**                                             |
+| ------------------------------- | ------------------------------------------------------------ |
+| `ls -lt | head`                 | Displays 10 recently modified files in the current folder.   |
+| `du | sort -nr`                 | Displays a list of folders and foldersizes, sorted from largest to smallest. |
+| `find . -type f -print | wc -l` | Displays the total number of files in the current folder and all of its subfolders. |
+
+## Filters
+
+These take the input and perform operations upon it, sending the results to the standard output. 
+
+| **Program** | What it does                                                 |
+| ----------- | ------------------------------------------------------------ |
+| `sort`      | Sorts the input and outputs the sorted result. By default it sorts by A-Z, and 0-9. |
+| `uniq`      | It removes duplicate lines of data from a sorted list of data. |
+| `grep`      | Checks each line of data from the input and outputs every line containing a specified pattern of characters. |
+| `fmt`       | Reads the input and outputs formatted text.                  |
+| `pr`        | Takes an input and splits the data into pages with page breaks, headers, and footers. Useful for printing! |
+| `head`      | Displays the first 10 lines of input.                        |
+| `tail`      | Displays the last 10 lines of input.                         |
+| `tr`        | Transforms characters, useful for when converting upper and lowercase characters or changing line termination characters to and from different types. |
+| `sed`       | Stream editor which can perform more sophisticated text transformations. |
+| `awk`       | A programming language designed for constructing filters.    |
+
+## Examples
+
+
 
 # Using cat (no not that cat.)
 
@@ -151,7 +414,7 @@ will read the file and display it in your terminal. If the file has some non-ASC
 cat -v unicode.txt
 ```
 
-If you're not into using `cat` and its various flags, try out `less` and `more`! These are interactive, allowing the user to use keys to navigate the file (much like `emacs` or `vim`).
+If you're not into using `cat` and its various flags, try out [`less`](#Navigating-files-using-less) and `more`! These are interactive, allowing the user to use keys to navigate the file (much like `emacs` or `vim`).
 
 ```bash
 less file.txt
