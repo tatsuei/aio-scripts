@@ -1,0 +1,34 @@
+projects/tutorials
+├── [ 232]  atomic-parsley-metadata.bat
+├── [ 943]  audacious-repeatall.sh
+├── [ 643]  audacious-single.sh
+├── [ 20K]  bash-commands.md
+├── [ 628]  cmd-compilation.md
+├── [1.7K]  convert-images.bat
+├── [1.6K]  converting-sacd-iso-files.md
+├── [4.4K]  deadbeef-custom-blue-theme.md
+├── [ 210]  ffmpeg-compilation.md
+├── [3.2K]  general-customisation.md
+├── [ 498]  git-guide.md
+├── [2.4K]  interactive-rclone.bat
+├── [ 15K]  linux-tips.md
+├── [  71]  multiple-zips.bat
+├── [  82]  multiple-zips-root-folder-only.bat
+├── [  71]  multiple-zips-zip-entire-folder.bat
+├── [  56]  myfile.csv
+├── [ 630]  now-playing.sh
+├── [1.8K]  ps-compilation.cmd
+├── [1.8K]  rclone-as-win-service.md
+├── [ 175]  rclone-manga.bat
+├── [ 175]  rclone-music.bat
+├── [ 176]  rclone-videos.bat
+├── [ 11K]  README.md
+├── [ 199]  rename-files.py
+├── [  69]  sync_folders.bat
+├── [   0]  tutorials-dir.txt
+├── [1.4K]  ubuntu-audio-fixes.md
+├── [1.1K]  using-cursor-create.md
+├── [ 358]  vlc-compilation.md
+└── [ 960]  win-task-scheduler.md
+
+0 directories, 31 files
