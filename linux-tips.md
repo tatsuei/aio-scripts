@@ -70,6 +70,8 @@ This section is meant for all Linux distros!
 
 11. You could refer to [this website](https://riseup.net/en/security/message-security/openpgp/best-practices#use-the-sks-keyserver-pool-instead-of-one-specific-server-with-secure-connections) for **really** detailed instructions!
 
+[Go to Top](#Table-of-Contents)
+
 ## Generating ToCs for markdown files!
 
 1. Fire up a terminal and paste this in: 
@@ -85,6 +87,8 @@ This section is meant for all Linux distros!
    `~/gh-md-toc ~/path/to/your/file.md`
 
 4. Copy and paste the resulting output into your `markdown` file and enjoy :)
+
+[Go to Top](#Table-of-Contents)
 
 ## Processes
 
@@ -108,6 +112,8 @@ This section is meant for all Linux distros!
 
 1. If the job is the only one running, i.e only one "rclone" is running, then: 
   `pkill process_name`
+
+[Go to Top](#Table-of-Contents)
 
 # Arch Linux
 
@@ -143,6 +149,8 @@ This section is meant for all Linux distros!
 
 1. To create the EFI mount point, type this `mkdir -p /mnt/efi` in the terminal.
 2. Then to mount the directory, type this `mount /dev/sda1 /mnt/efi`. 
+
+[Go to Top](#Table-of-Contents)
 
 # Ubuntu
 
@@ -191,6 +199,8 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 4. Once that's squared away, L O G O U T.
 5. Log back in... and??? :money_mouth_face:
 
+[Go to Top](#Table-of-Contents)
+
 ### 5. Creating custom terminal commands
 
 1. Open a terminal window and create a .bash_aliases file in your home directory: `gedit ~/.bash_aliases`
@@ -199,6 +209,8 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 4. In the terminal window, type this: `. ~/.bashrc` to refresh your .bashrc file.
 5.  Try using your new alias in terminal by typing `your_alias_name` in the terminal to confirm it works.
 6. E N J O Y :smiley:
+
+[Go to Top](#Table-of-Contents)
 
 ### 6. Adding a dock to your second monitor
 
@@ -218,12 +230,16 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 14. Back to your terminal! Let's restart the `Plank` dock shall we? `pkill plank` and then `plank &` and press `Enter` or `Return` once it loads up!
 15. You'll be able to see your second dock now! Enjoy :D 
 
+[Go to Top](#Table-of-Contents)
+
 ## Shortcuts (Ubuntu 20.04)
 
 ### 1. Moving Windows between Workspaces
 
 1. Ctrl + Alt + Arrowkey to switch between workspaces
 2. Ctrl + Alt + Shift + Arrowkey to move the current window between workspaces
+
+[Go to Top](#Table-of-Contents)
 
 ### 2. Custom Key Mappings
 
@@ -268,7 +284,9 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 
 [Go to Top](#Table-of-Contents)
 
-## Auto-connect Bluetooth Devices
+## Wireless Devices
+
+### Auto-connect Bluetooth Devices
 
 **Note:**
 This has been tested on my `Galaxy Buds` OS: `Ubuntu 20.04` as of 8th May 2020.
@@ -367,6 +385,25 @@ Comment=Connects to Galaxy Buds
 
 [Go to Top](#Table-of-Contents)
 
+### Low volume on wireless headphones? 
+
+1. **Important!!** **Remember to substitute the MAC address by going into the Settings menu and find Bluetooth devices**
+2. Try this: 
+  `dbus-send --print-reply --system --dest=org.bluez /org/bluez/hci0/dev_<mac_address_of_headphones> org.bluez.MediaControl1.VolumeUp`
+3. If that works, skip steps 4-6 :)
+4. Another fix would be: 
+  `sudo gedit /lib/systemd/system/bluetooth.service`
+5. Add this:
+  `--noplugin=avrcp`
+  to this:
+  `ExecStart=/usr/lib/bluetooth/bluetoothd`
+6. Then run: 
+  `sudo systemctl daemon-reload`
+  `sudo systemctl restart bluetooth`
+7. Reconnect your headphones and enjoy!
+
+[Go to Top](#Table-of-Contents)
+
 ## Problems/Errors when running `sudo apt update` and `sudo apt upgrade`
 
 ### Skipping acquire of configured file
@@ -402,3 +439,5 @@ Comment=Connects to Galaxy Buds
    `deb [arch=amd64] https://` *or* `deb [arch=amd64] http://`
 
 6. Et voila! Run your `update` and `upgrade` commands without issues.
+
+[Go to Top](#Table-of-Contents)
