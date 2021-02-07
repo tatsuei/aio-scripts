@@ -158,7 +158,7 @@ This section is meant for all Linux distros!
 
 [Go to Top](#Table-of-Contents)
 
-# Ubuntu
+# Ubuntu/Debian-based
 
 ## Ubuntu/Mint Tips
 
