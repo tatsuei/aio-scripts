@@ -36,7 +36,7 @@ Table of Contents
       * [Problems/Errors when running sudo apt update and sudo apt upgrade](#problemserrors-when-running-sudo-apt-update-and-sudo-apt-upgrade)
          * [Skipping acquire of configured file](#skipping-acquire-of-configured-file)
 
-# ** Credits go to their respective repo owners, contributors, and maintainers. **
+**Credits go to their respective repo owners, contributors, and maintainers for providing solutions to issues I've come across. This repo only serves as a mini-library of the questions and answers I've found useful and would like to compile them into a list.**
 
 # General
 
