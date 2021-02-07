@@ -8,6 +8,7 @@ Table of Contents
       * [Installation](#installation)
          * [Pre-installation](#pre-installation)
             * [Fixing the "no public key" issue during the pre-installation phase](#fixing-the-no-public-key-issue-during-the-pre-installation-phase)
+         * [Mount the file systems](#mount-the-file-systems)
    * [Ubuntu](#ubuntu)
       * [Ubuntu/Mint Tips](#ubuntumint-tips)
       * [Customisation](#customisation)
@@ -16,6 +17,7 @@ Table of Contents
          * [3. DeadBeeF Custom Layout](#3-deadbeef-custom-layout)
          * [4. Getting Apps to Obey System Themes (Using Qt5 and GTK-2)](#4-getting-apps-to-obey-system-themes-using-qt5-and-gtk-2)
          * [5. Creating custom terminal commands](#5-creating-custom-terminal-commands)
+         * [6. Adding a dock to your second monitor](#6-adding-a-dock-to-your-second-monitor)
       * [Shortcuts (Ubuntu 20.04)](#shortcuts-ubuntu-2004)
          * [1. Moving Windows between Workspaces](#1-moving-windows-between-workspaces)
          * [2. Custom Key Mappings](#2-custom-key-mappings)
@@ -25,6 +27,8 @@ Table of Contents
       * [Installing fonts](#installing-fonts)
       * [Missing System Tray Icons?](#missing-system-tray-icons)
       * [Auto-connect Bluetooth Devices](#auto-connect-bluetooth-devices)
+      * [Problems/Errors when running sudo apt update and sudo apt upgrade](#problemserrors-when-running-sudo-apt-update-and-sudo-apt-upgrade)
+         * [Skipping acquire of configured file](#skipping-acquire-of-configured-file)
 
 # General
 
@@ -322,3 +326,38 @@ Comment=Connects to Galaxy Buds
 
 [Go to Top](#Table-of-Contents)
 
+## Problems/Errors when running `sudo apt update` and `sudo apt upgrade`
+
+### Skipping acquire of configured file
+
+1. This is something I came across with `PostgreSQL`, so feel free to change the package name to match the package producing the error.
+
+2. Fire up a terminal and paste these commands in one after the other!
+
+   `sudo grep -i postgresql /etc/apt/sources.list`
+
+   *or*
+
+   `sudo grep -i postgresql /etc/apt/sources.list.d/*.list`
+
+3. It'll pop up with a filename along with its directory, so let's edit the file:
+
+   `sudo -H gedit /etc/apt/sources.list` 
+
+   *or*
+
+   `sudo -H gedit /etc/apt/sources.list.d/found_filename.list` 
+
+   *If you're using the second command, do remember to exclude the trailing `:deb` from the filepath.
+
+   **Also, ignore any error messages that may pop up.
+
+4. Once the editor is open, find the line which starts with: 
+
+   `deb https://` *or* `deb http://`.
+
+5. Change the above line to:
+
+   `deb [arch=amd64] https://` *or* `deb [arch=amd64] http://`
+
+6. Et voila! Run your `update` and `upgrade` commands without issues.
