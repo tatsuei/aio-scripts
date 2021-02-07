@@ -86,6 +86,29 @@ This section is meant for all Linux distros!
 
 4. Copy and paste the resulting output into your `markdown` file and enjoy :)
 
+## Processes
+
+### Killing processes or jobs
+
+1. Fire up a terminal and find the troublemaker's process ID using ps: 
+`ps -eaf | grep process_name`
+2. Kill it:
+`kill process_id`
+
+*or*
+
+1. Find a process using pgrep:
+  `pgrep processname`
+
+2. Kill the process (in the case of multiple processes): 
+
+  `kill process_id`
+
+*or* 
+
+1. If the job is the only one running, i.e only one "rclone" is running, then: 
+  `pkill process_name`
+
 # Arch Linux
 
 ## Installation
