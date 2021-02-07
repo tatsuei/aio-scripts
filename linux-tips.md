@@ -2,7 +2,6 @@ Table of Contents
 =================
 
    * [Table of Contents](#table-of-contents)
-   * [** Credits go to their respective repo owners, contributors, and maintainers. **](#-credits-go-to-their-respective-repo-owners-contributors-and-maintainers-)
    * [General](#general)
       * [Configuring GnuPG Keyservers](#configuring-gnupg-keyservers)
       * [Generating ToCs for markdown files!](#generating-tocs-for-markdown-files)
@@ -13,7 +12,7 @@ Table of Contents
          * [Pre-installation](#pre-installation)
             * [Fixing the "no public key" issue during the pre-installation phase](#fixing-the-no-public-key-issue-during-the-pre-installation-phase)
          * [Mount the file systems](#mount-the-file-systems)
-   * [Ubuntu](#ubuntu)
+   * [Ubuntu/Debian-based](#ubuntudebian-based)
       * [Ubuntu/Mint Tips](#ubuntumint-tips)
       * [Customisation](#customisation)
          * [1. Changing Windows Cursors for Ubuntu](#1-changing-windows-cursors-for-ubuntu)
@@ -36,7 +35,9 @@ Table of Contents
       * [Problems/Errors when running sudo apt update and sudo apt upgrade](#problemserrors-when-running-sudo-apt-update-and-sudo-apt-upgrade)
          * [Skipping acquire of configured file](#skipping-acquire-of-configured-file)
 
-**Credits go to their respective repo owners, contributors, and maintainers for providing solutions to issues I've come across. This repo only serves as a mini-library of the questions and answers I've found useful and would like to compile them into a list.**
+
+
+#### **Credits go to their respective repo owners, contributors, and maintainers for providing solutions to issues I've come across. This repo only serves as a mini-library of the questions and answers I've found useful and would like to compile them into a list.**
 
 # General
 
