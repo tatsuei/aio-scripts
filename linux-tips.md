@@ -30,6 +30,8 @@ Table of Contents
       * [Problems/Errors when running sudo apt update and sudo apt upgrade](#problemserrors-when-running-sudo-apt-update-and-sudo-apt-upgrade)
          * [Skipping acquire of configured file](#skipping-acquire-of-configured-file)
 
+# ** Credits go to their respective repo owners, contributors, and maintainers. **
+
 # General
 
 This section is meant for all Linux distros!
@@ -67,6 +69,22 @@ This section is meant for all Linux distros!
 10. Enjoy! :)
 
 11. You could refer to [this website](https://riseup.net/en/security/message-security/openpgp/best-practices#use-the-sks-keyserver-pool-instead-of-one-specific-server-with-secure-connections) for **really** detailed instructions!
+
+## Generating ToCs for markdown files!
+
+1. Fire up a terminal and paste this in: 
+
+   `wget https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc`
+
+2. Then this:
+
+   `chmod a+x gh-md-toc`
+
+3. Then in your desired dir, paste this in:
+
+   `~/gh-md-toc ~/path/to/your/file.md`
+
+4. Copy and paste the resulting output into your `markdown` file and enjoy :)
 
 # Arch Linux
 
