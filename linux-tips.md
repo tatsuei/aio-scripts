@@ -2,8 +2,12 @@ Table of Contents
 =================
 
    * [Table of Contents](#table-of-contents)
+   * [** Credits go to their respective repo owners, contributors, and maintainers. **](#-credits-go-to-their-respective-repo-owners-contributors-and-maintainers-)
    * [General](#general)
       * [Configuring GnuPG Keyservers](#configuring-gnupg-keyservers)
+      * [Generating ToCs for markdown files!](#generating-tocs-for-markdown-files)
+      * [Processes](#processes)
+         * [Killing processes or jobs](#killing-processes-or-jobs)
    * [Arch Linux](#arch-linux)
       * [Installation](#installation)
          * [Pre-installation](#pre-installation)
@@ -26,7 +30,9 @@ Table of Contents
          * [Ubuntu 16.10 and below](#ubuntu-1610-and-below)
       * [Installing fonts](#installing-fonts)
       * [Missing System Tray Icons?](#missing-system-tray-icons)
-      * [Auto-connect Bluetooth Devices](#auto-connect-bluetooth-devices)
+      * [Wireless Devices](#wireless-devices)
+         * [Auto-connect Bluetooth Devices](#auto-connect-bluetooth-devices)
+         * [Low volume on wireless headphones?](#low-volume-on-wireless-headphones)
       * [Problems/Errors when running sudo apt update and sudo apt upgrade](#problemserrors-when-running-sudo-apt-update-and-sudo-apt-upgrade)
          * [Skipping acquire of configured file](#skipping-acquire-of-configured-file)
 
