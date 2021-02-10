@@ -8,6 +8,9 @@ Table of Contents
       * [Generating ToCs for markdown files!](#generating-tocs-for-markdown-files)
       * [Processes](#processes)
          * [Killing processes or jobs](#killing-processes-or-jobs)
+      * [Tree-view using "ls"](#tree-view-using-ls)
+         * [For directories and files](#for-directories-and-files)
+         * [For directories only](#for-directories-only)
    * [Arch Linux](#arch-linux)
       * [Installation](#installation)
          * [Pre-installation](#pre-installation)
@@ -139,6 +142,24 @@ Breakdown of the above:
 
 1. If the job is the only one running, i.e only one "rclone" is running, then: 
     `pkill process_name`
+
+[Go to Top](#Table-of-Contents)
+
+## Tree-view using "ls"
+
+### For directories and files
+
+1. Paste this into that window you opened!
+
+   `find . -print | sort | sed 's;[^/]*/;|---;g;s;---|; |;g'`
+
+### For directories only
+
+1. Paste this!
+
+   `ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'`
+
+*Will update this section with a breakdown of how it works when I understand bash better.
 
 [Go to Top](#Table-of-Contents)
 
