@@ -4,6 +4,7 @@ Table of Contents
    * [Table of Contents](#table-of-contents)
    * [General](#general)
       * [Configuring GnuPG Keyservers](#configuring-gnupg-keyservers)
+      * [Copying files into parent and children subfolders](#copying-files-into-parent-and-children-subfolders)
       * [Generating ToCs for markdown files!](#generating-tocs-for-markdown-files)
       * [Processes](#processes)
          * [Killing processes or jobs](#killing-processes-or-jobs)
@@ -35,9 +36,7 @@ Table of Contents
       * [Problems/Errors when running sudo apt update and sudo apt upgrade](#problemserrors-when-running-sudo-apt-update-and-sudo-apt-upgrade)
          * [Skipping acquire of configured file](#skipping-acquire-of-configured-file)
 
-
-
-#### **Credits go to their respective repo owners, contributors, and maintainers for providing solutions to issues I've come across. This repo only serves as a mini-library of the questions and answers I've found useful and would like to compile them into a list.**
+***Credits go to their respective repo owners, contributors, and maintainers for providing solutions to issues I've come across. This repo only serves as a mini-library of the questions and answers I've found useful and would like to compile them into a list.***
 
 # General
 
@@ -79,7 +78,7 @@ This section is meant for all Linux distros and their derivatives!
 
 [Go to Top](#Table-of-Contents)
 
-## Copying files into parent + children subfolders
+## Copying files into parent and children subfolders
 
 `find . -type d -exec cp filename.ext {} \;`
 
@@ -97,6 +96,8 @@ Breakdown of the above:
 6. `cp` is short for "copy"
 7. `{}` indicates (or contains*) the results from the `find` expression. 
 8. `\` is the common "escape" symbol. In this case the backslash is used to allow `;` to be parsed by the `-exec` flag.
+
+[Go to Top](#Table-of-Contents)
 
 ## Generating ToCs for markdown files!
 
