@@ -79,6 +79,14 @@ This section is meant for all Linux distros and their derivatives!
 
 [Go to Top](#Table-of-Contents)
 
+## Copying files into parent + children subfolders
+
+`find . -type d -exec cp filename.ext {} \;`
+
+Replace 'filename' and 'ext' with the proper filename! Like so:
+
+`find . -type d -exec cp helloworld.txt {} \;`
+
 ## Generating ToCs for markdown files!
 
 1. Fire up a terminal and paste this in: 
