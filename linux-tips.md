@@ -41,7 +41,7 @@ Table of Contents
 
 # General
 
-This section is meant for all Linux distros!
+This section is meant for all Linux distros and their derivatives!
 
 ## Configuring GnuPG Keyservers
 
@@ -109,7 +109,7 @@ This section is meant for all Linux distros!
 *or*
 
 1. Find a process using pgrep:
-  `pgrep processname`
+    `pgrep processname`
 
 2. Kill the process (in the case of multiple processes): 
 
@@ -118,7 +118,7 @@ This section is meant for all Linux distros!
 *or* 
 
 1. If the job is the only one running, i.e only one "rclone" is running, then: 
-  `pkill process_name`
+    `pkill process_name`
 
 [Go to Top](#Table-of-Contents)
 
@@ -396,17 +396,17 @@ Comment=Connects to Galaxy Buds
 
 1. **Important!!** **Remember to substitute the MAC address by going into the Settings menu and find Bluetooth devices**
 2. Try this: 
-  `dbus-send --print-reply --system --dest=org.bluez /org/bluez/hci0/dev_<mac_address_of_headphones> org.bluez.MediaControl1.VolumeUp`
+    `dbus-send --print-reply --system --dest=org.bluez /org/bluez/hci0/dev_<mac_address_of_headphones> org.bluez.MediaControl1.VolumeUp`
 3. If that works, skip steps 4-6 :)
 4. Another fix would be: 
-  `sudo gedit /lib/systemd/system/bluetooth.service`
+    `sudo gedit /lib/systemd/system/bluetooth.service`
 5. Add this:
-  `--noplugin=avrcp`
-  to this:
-  `ExecStart=/usr/lib/bluetooth/bluetoothd`
+    `--noplugin=avrcp`
+    to this:
+    `ExecStart=/usr/lib/bluetooth/bluetoothd`
 6. Then run: 
-  `sudo systemctl daemon-reload`
-  `sudo systemctl restart bluetooth`
+    `sudo systemctl daemon-reload`
+    `sudo systemctl restart bluetooth`
 7. Reconnect your headphones and enjoy!
 
 [Go to Top](#Table-of-Contents)
