@@ -87,6 +87,17 @@ Replace 'filename' and 'ext' with the proper filename! Like so:
 
 `find . -type d -exec cp helloworld.txt {} \;`
 
+Breakdown of the above: 
+
+1. `find` is a itemsearch utility
+2. `.` denotes the current directory
+3. `-type` acts as a filter for item types
+4. `d` denotes a directory
+5. `-exec` is short for "execute"
+6. `cp` is short for "copy"
+7. `{}` indicates (or contains*) the results from the `find` expression. 
+8. `\` is the common "escape" symbol. In this case the backslash is used to allow `;` to be parsed by the `-exec` flag.
+
 ## Generating ToCs for markdown files!
 
 1. Fire up a terminal and paste this in: 
