@@ -31,7 +31,9 @@ Table of Contents
       * [Printing SysInfo](#printing-sysinfo)
          * [Ubuntu 17.04 and up](#ubuntu-1704-and-up)
          * [Ubuntu 16.10 and below](#ubuntu-1610-and-below)
-      * [Installing fonts](#installing-fonts)
+      * [Installing Packages](#installing-packages)
+         * [Installing Android Studio](#installing-android-studio)
+         * [Installing fonts](#installing-fonts)
       * [Missing System Tray Icons?](#missing-system-tray-icons)
       * [Wireless Devices](#wireless-devices)
          * [Auto-connect Bluetooth Devices](#auto-connect-bluetooth-devices)
@@ -328,6 +330,8 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 5. Run the installer, and choose if you want to import your previous settings, or start fresh!
 6. In the new Android Studio window, click `Configure`, and select `Create Desktop Entry` for easy access from the App Dashboard.
 7. Next step would be to read the `docs` or start building apps! 
+
+[Go to Top](#Table-of-Contents)
 
 ### Installing fonts
 
