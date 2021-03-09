@@ -317,7 +317,19 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 
 [Go to Top](#Table-of-Contents)
 
-## Installing fonts
+## Installing Packages
+
+### Installing Android Studio
+
+1. Download the latest package from the [official Android Developer website](https://developer.android.com/studio).
+2. Unpack this `tar.gz` archive into `/usr/local/` for yourself or `/opt/` if you wanna get every user in on the party! Skip `step 3` if you prefer working from your current directory.
+3. Fire up a terminal, and paste this in: `sudo cp "<folder_name>" /usr/local/ -r`
+4. Navigate "`cd`" into `bin`. Let's perform a check before going ahead and running the installer: `chmod +rx studio.sh`. 
+5. Run the installer, and choose if you want to import your previous settings, or start fresh!
+6. In the new Android Studio window, click `Configure`, and select `Create Desktop Entry` for easy access from the App Dashboard.
+7. Next step would be to read the `docs` or start building apps! 
+
+### Installing fonts
 
 1. Download your desired fonts, and extract them out of the ZIP file(s) if necessary.
 2. Double click each of them and press *Install* for each .ttf or .otf file.

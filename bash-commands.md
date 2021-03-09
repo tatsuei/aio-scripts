@@ -1,7 +1,6 @@
 Table of Contents
 =================
 
-   * [Table of Contents](#table-of-contents)
    * [Listing Files](#listing-files)
       * [Listing the ten most recently modified files!](#listing-the-ten-most-recently-modified-files)
       * [Listing all files and folders!](#listing-all-files-and-folders)
