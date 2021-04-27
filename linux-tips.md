@@ -327,6 +327,11 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 2. Type this in: `sudo dpkg -i /path/to/deb/file`
 3. Remember to substitute the filename for `path/to/deb/file`!
 
+### Unpacking `tar.gz` folders
+
+1. Fire up a terminal, and navigate to the folder containing your downloaded `tar.gz` file!
+2. Type this in: `tar -zxvf FileName.tar.gz` et voila!
+
 ### Installing Android Studio
 
 1. Download the latest package from the [official Android Developer website](https://developer.android.com/studio).
