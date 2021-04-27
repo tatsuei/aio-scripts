@@ -321,6 +321,12 @@ Goto [easylinuxtips](https://easylinuxtipsproject.blogspot.com/p/1.html) and fol
 
 ## Installing Packages
 
+### Installing general *.deb packages using `dpkg`
+
+1. Navigate to the folder containing the downloaded `.deb` file. E.g: `cd ~/Downloads`
+2. Fire up a terminal and type this in: `sudo dpkg -i /path/to/deb/file`
+3. Remember to substitute the filename for `path/to/deb/file`!
+
 ### Installing Android Studio
 
 1. Download the latest package from the [official Android Developer website](https://developer.android.com/studio).
