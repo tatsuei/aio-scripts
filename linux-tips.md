@@ -236,8 +236,6 @@ Breakdown of the above:
    /path/to/directory on /path/to/directory type ecryptfs (rw,relatime,ecryptfs_sig=aaaaaaaaaaaaaaaa,ecryptfs_cipher=aes,ecryptfs_key_bytes=16,ecryptfs_unlink_sigs)
    ```
 
-   
-
 10. Now for the final test: unmount and re-mount your folder.
 
     `sudo umount /path/to/directory`
@@ -258,6 +256,8 @@ Breakdown of the above:
       ecryptfs_sig=aaaaaaaaaaaaaaaa
     Mounted eCryptfs
     ```
+
+[Go to Top](#Table-of-Contents)
 
 # Arch Linux
 
