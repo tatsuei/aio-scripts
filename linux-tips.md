@@ -11,6 +11,8 @@ Table of Contents
       * [Tree-view using "ls"](#tree-view-using-ls)
          * [For directories and files](#for-directories-and-files)
          * [For directories only](#for-directories-only)
+      * [Encrypt folder(s) using ecryptfs](#encrypt-folders-using-ecryptfs)
+         * [Decrypting/Recovering older ecryptfs encrypted directories](#decryptingrecovering-older-ecryptfs-encrypted-directories)
    * [Arch Linux](#arch-linux)
       * [Installation](#installation)
          * [Pre-installation](#pre-installation)
@@ -32,6 +34,8 @@ Table of Contents
          * [Ubuntu 17.04 and up](#ubuntu-1704-and-up)
          * [Ubuntu 16.10 and below](#ubuntu-1610-and-below)
       * [Installing Packages](#installing-packages)
+         * [Installing general *.deb packages using dpkg](#installing-general-deb-packages-using-dpkg)
+         * [Unpacking tar.gz folders](#unpacking-targz-folders)
          * [Installing Android Studio](#installing-android-studio)
          * [Installing fonts](#installing-fonts)
       * [Missing System Tray Icons?](#missing-system-tray-icons)
@@ -39,9 +43,7 @@ Table of Contents
          * [Auto-connect Bluetooth Devices](#auto-connect-bluetooth-devices)
          * [Low volume on wireless headphones?](#low-volume-on-wireless-headphones)
       * [Problems/Errors when running sudo apt update and sudo apt upgrade](#problemserrors-when-running-sudo-apt-update-and-sudo-apt-upgrade)
-         * [Skipping acquire of configured file](#skipping-acquire-of-configured-file)
-
-***Credits go to their respective repo owners, contributors, and maintainers for providing solutions to issues I've come across. This repo only serves as a mini-library of the questions and answers I've found useful and would like to compile them into a list.***
+         * [Skipping acquire of configured file](#skipping-acquire-of-configured-file)***Credits go to their respective repo owners, contributors, and maintainers for providing solutions to issues I've come across. This repo only serves as a mini-library of the questions and answers I've found useful and would like to compile them into a list.***
 
 # General
 
