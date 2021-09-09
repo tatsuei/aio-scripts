@@ -165,6 +165,100 @@ Breakdown of the above:
 
 [Go to Top](#Table-of-Contents)
 
+## Encrypt folder(s) using ecryptfs
+
+1. Create a new directory.
+
+   `mkdir ~/path/to/directory`
+
+2. Change the read/write permissions for the above directory.
+
+   `chmod 700 ~/path/to/directory`
+
+3. Now, let's mount your new encrypted folder! 
+
+   `sudo mount -t ~/path/to/directory ~/path/to/directory`
+
+4. Answer all questions by typing in `y` for `yes` and `n` for `no`, unless otherwise specified by the square brackets `[ ]`.
+
+5. It will ask you for a passphrase, so pick one that you will remember. (Or just keep it safe in a password manager.)
+
+6. Next select the default cipher, by entering the number corresponding to `aes`. 
+
+   ```bash
+   Select cipher: 
+    1) aes: blocksize = 16; min keysize = 16; max keysize = 32
+    2) blowfish: blocksize = 8; min keysize = 16; max keysize = 56
+    3) des3_ede: blocksize = 8; min keysize = 24; max keysize = 24
+    4) twofish: blocksize = 16; min keysize = 16; max keysize = 32
+    5) cast6: blocksize = 16; min keysize = 16; max keysize = 32
+    6) cast5: blocksize = 8; min keysize = 5; max keysize = 16
+   Selection [aes]: 1
+   ```
+
+   It'll ask you for the amount of key bytes. Select the default amount. 
+
+   ```bash
+   Select key bytes: 
+    1) 16
+    2) 32
+    3) 24
+   Selection [16]: 1
+   ```
+
+   An option called `plaintext passthrough` allows for non-encrypted files to be used inside your encrypted folder. The default (recommended) configuration is to disable this option. If you would like to protect your files against prying eyes, you can enable filename encryption which is disabled by default.
+
+   ```bash
+   Enable plaintext passthrough (y/n) [n]: n
+   Enable filename encryption (y/n) [n]: n
+   ```
+
+7. It will then attempt to mount the folder using your specified configuration. 
+
+   ```bash
+   Attempting to mount with the following options:
+     ecryptfs_unlink_sigs
+     ecryptfs_key_bytes=16
+     ecryptfs_cipher=aes
+     ecryptfs_sig=aaaaaaaaaaaaaaaa
+   Mounted eCryptfs
+   ```
+
+8. Copy the encrypted filename signature, which is labelled `ecryptfs_sig`. In this case it is `aaaaaaaaaaaaaaaa`.
+
+9. Test that the folder is mounted properly by pasting this in: 
+
+   `mount | grep ~/path/to/directory`
+
+   It will spit out something like this: 
+
+   ```bash
+   /path/to/directory on /path/to/directory type ecryptfs (rw,relatime,ecryptfs_sig=aaaaaaaaaaaaaaaa,ecryptfs_cipher=aes,ecryptfs_key_bytes=16,ecryptfs_unlink_sigs)
+   ```
+
+   
+
+10. Now for the final test: unmount and re-mount your folder.
+
+    `sudo umount /path/to/directory`
+
+    Re-mount it:
+
+    ```bash
+    sudo mount -t ecryptfs -o key=passphrase:passphrase_passwd=your_passphrase_here,ecryptfs_cipher=aes,ecryptfs_key_bytes=16,ecryptfs_passthrough=no,ecryptfs_enable_filename_crypto=yes,ecryptfs_fnek_sig=aaaaaaaaaaaaaaaa /path/to/directory /path/to/directory
+    ```
+
+11. It will spit out what we saw in step 7 above:
+
+    ```bash
+    Attempting to mount with the following options:
+      ecryptfs_unlink_sigs
+      ecryptfs_key_bytes=16
+      ecryptfs_cipher=aes
+      ecryptfs_sig=aaaaaaaaaaaaaaaa
+    Mounted eCryptfs
+    ```
+
 # Arch Linux
 
 ## Installation
