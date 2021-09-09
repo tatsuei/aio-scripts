@@ -259,6 +259,36 @@ Breakdown of the above:
 
 [Go to Top](#Table-of-Contents)
 
+### Decrypting/Recovering older ecryptfs encrypted directories
+
+1. Ensure your target hard drive is mounted using your preferred method. 
+
+   `df -h` will bring up all partitions and disks in human-readable format.
+
+   Alternatively, you could access the `Disks` application by searching for it (press the Win/Command key.)
+
+2. Fire up a terminal and paste this in! 
+
+   `sudo apt-get install -y ecryptfs-utils`
+
+   OR 
+
+   `sudo apt install -y ecryptfs-utils`
+
+3. Once `ecrypt` is installed, paste this: 
+
+   `sudo ecryptfs-recover-private`
+
+   and follow the on-screen instructions.
+
+4. Once your desired directory(ies) are decrypted and you have access to them, move them to another location which you can access easily (and optionally create a new encrypted directory to store aforementioned files).
+
+5. `Nautilus` is capable of browsing the temporary directory, just enter this into your terminal:
+
+   `sudo nautilus`
+
+[Go to Top](#Table-of-Contents)
+
 # Arch Linux
 
 ## Installation
