@@ -48,3 +48,24 @@ I might be able to offer a better suggestion with a deeper understanding of how 
 How are you connecting the Zoom H6 to the S8 now? Through the stereo jack or through USB? Because if you were originally looking for a USB solution for android, was that just to supplement the webcam image while then connecting the Zoom H6 to your pc directly as a result?
 
 What program/app are you currently using to stream to Facebook/YouTube from the phone? The proprietary app for each platform or a third party software?
+
+---
+
+[
+![User avatar](https://styles.redditmedia.com/t5_1iaufa/styles/profileIcon_snoo910a2fd2-ece8-45f7-bca6-5d48a313dc12-headshot.png?width=256&height=256&crop=256:256,smart&s=84568c0f4c9652cfe23fe517eae895c25ef9d621)](https://www.reddit.com/user/chi11estpanda/)
+
+level 3
+
+[chi11estpanda](https://www.reddit.com/user/chi11estpanda/)·[1y](https://www.reddit.com/r/Twitch/comments/g2zmjq/best_way_to_use_android_phone_as_webcam_on_pc/fns4zhe/?utm_source=reddit&utm_medium=web2x&context=3)
+
+To capture the camera (and previously without any overlays), I am using the the [Streamlabs OBS for Android](https://play.google.com/store/apps/details?id=com.streamlabs) as previously mentioned and having the destination stream assigned to a "Custom RTMP server" which connects with a personal Nginx RTMP server running on my computer. Although I say "server," it's really just a program (or technically a "Windows Service") that can run on a regular PC in the background to accept the video feed being sent out from the phone.
+
+Unfortunately though, perhaps in the last year or so, the newer versions of the app now add a watermark in a corner of the screen you select. Whereas previously, I had used the app for an entire year without said watermark (as I suppose popularity of its use grew and they had to monetize their app and thereby created a "premium subscription" service.
+
+However, there are alternative apps that will perform the same task without a watermark in terms of broadcasting a clean camera image to a custom RTMP server. The one I know of is [MOZA Genie](https://play.google.com/store/apps/details?id=com.gudsen.genie), although it's the camera app for my gimbal, you can still use its camera function to stream a live feed of the camera to a custom rtmp server address.
+
+~*At this point I stopped to find you alternatives and took a look at* [*obs.ninja*](https://obs.ninja/)*, the reason i note this will be more obvious in a moment~*
+
+However, you can forget all that as I just took a look at [u/KuhjaKnight](https://www.reddit.com/u/KuhjaKnight/)'s suggestion of using [obs.ninja](https://obs.ninja/) and I have to say I'm still in awe of how this works right now but the latency on it is incredible. It's almost unbelievable until i literally just tried it myself. It's super simple and it will provide you with the clean camera feed as you requested. During my initial testing, the bandwidth usage is minimal so it's almost unbelievable to see the reaction time I was getting both from a PC and from a mobile phone. I'm literally about to go test more various applications of it because it appears it's only been recently developed further in the last month or so.
+
+In any case, check it out. I'm super excited about what we just discovered here. Thank you for sharing that [u/KuhjaKnight](https://www.reddit.com/u/KuhjaKnight/)!
