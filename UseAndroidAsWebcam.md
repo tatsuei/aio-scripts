@@ -69,3 +69,11 @@ However, there are alternative apps that will perform the same task without a wa
 However, you can forget all that as I just took a look at [u/KuhjaKnight](https://www.reddit.com/u/KuhjaKnight/)'s suggestion of using [obs.ninja](https://obs.ninja/) and I have to say I'm still in awe of how this works right now but the latency on it is incredible. It's almost unbelievable until i literally just tried it myself. It's super simple and it will provide you with the clean camera feed as you requested. During my initial testing, the bandwidth usage is minimal so it's almost unbelievable to see the reaction time I was getting both from a PC and from a mobile phone. I'm literally about to go test more various applications of it because it appears it's only been recently developed further in the last month or so.
 
 In any case, check it out. I'm super excited about what we just discovered here. Thank you for sharing that [u/KuhjaKnight](https://www.reddit.com/u/KuhjaKnight/)!
+
+----
+
+## Alternatives
+
+### [Iriun (Use your Android/iPhone as a wireless webcam)](https://iriun.com/)
+
+### [DroidCam (Use your Android as a webcam over WiFi or USB!)](https://www.dev47apps.com/)
