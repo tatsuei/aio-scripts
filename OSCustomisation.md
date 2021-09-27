@@ -1,6 +1,6 @@
 [toc]
 
-# Customisation
+# Browser Customisation
 
 ## Firefox
 
@@ -65,3 +65,36 @@ https://developer.mozilla.org/en-US/docs/Tools/Style_Editor
 ### Minimal Firefox userChrome style
 
 [Minimal Functional Fox](https://github.com/mut-ex/minimal-functional-fox) or [Minimal Functional Fox (Fork)](https://github.com/tatsuei/minimal-functional-fox)
+
+# Windows Customisation
+
+## Adding aliases ala Ubuntu/Linux style 
+
+1. Create a `.bat` or `.cmd` file with your `DOSKEY` commands.
+
+2. Run (Win+R)`regedit` and go to `HKEY_CURRENT_USER\Software\Microsoft\Command Processor`. For Windows 10, go to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor` instead.
+
+3. Add String Value entry with the name `AutoRun` and the *full* path of your `.bat` or `.cmd` file.
+
+   For example, `%USERPROFILE%\alias.cmd`, replacing the initial segment of the path with `%USERPROFILE%` is useful for syncing among multiple machines.
+
+4. An example of how to do this: 
+
+   1. Create a `.bat` file and paste this in: `doskey np=notepad++.exe $*`
+   2. Now copy the *full* path of this file from File Explorer's URL bar, e.g. `C:\Users\YourUsername\Documents\MyBatchFile.bat` and follow steps 2 and 3.
+
+5. And you're done! Now if you're in `cmd`, type in `cmd` to restart your terminal. Else, if in `PowerShell` type in `. $profile` to source your user profile (similar to `. .bashrc` in Ubuntu) again. This should add your newly created alias(es) to the current and future sessions. 
+
+   Credits go to everyone providing detailed answers in [Aliases in Windows command prompt](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt). 
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
