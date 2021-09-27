@@ -87,14 +87,39 @@ https://developer.mozilla.org/en-US/docs/Tools/Style_Editor
 
    Credits go to everyone providing detailed answers in [Aliases in Windows command prompt](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt). 
 
-   
+## Adding SSH key to current Git Bash session
 
-   
+1. Add the following to `.profile` (store this file in your user folder `%USERNAME%` or somewhere safe, and add it to `PATH` for convenience): 
 
-   
+```bash
+env=~/.ssh/agent.env
 
-   
+agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
 
-   
+agent_start () {
+    (umask 077; ssh-agent >| "$env")
+    . "$env" >| /dev/null ; }
 
-   
+agent_load_env
+
+# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2= agent not running
+agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
+
+if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+    agent_start
+    ssh-add
+elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+    ssh-add
+fi
+
+unset env
+```
+
+2. Running `. .profile` in Git Bash will request your SSH passphrase, so enter that and you're set for the entire session. This is not a persistent on boot solution.
+
+Credits go to [velval on Superuser SE](https://superuser.com/questions/1010542/how-to-make-git-not-prompt-for-passphrase-for-ssh-key) and [GitHub article for reference](https://help.github.com/en/articles/working-with-ssh-key-passphrases).
+
+
+
+
+
